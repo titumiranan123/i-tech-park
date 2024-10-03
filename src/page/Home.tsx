@@ -1,13 +1,14 @@
 import React from 'react';
 import Header from '../components/Header';
-import Contact from './Contact';
+import TextNavigationSlider from './Services';
+import Contactsection from '../components/Contact';
 
 const Home:React.FC = () => {
   return (
     <div>
       <Header />
-      <Contact />
-      
+      <TextNavigationSlider />
+      <Contactsection />
     </div>
   );
 };

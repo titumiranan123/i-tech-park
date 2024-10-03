@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from "react";
 import arrow from "./../assets/arrow1.png";
-import Swal from 'sweetalert2';
- import ReCAPTCHA from "react-google-recaptcha";
- import call from "./../assets/call.png"
- import email from "./../assets/email.png"
- import user from "./../assets/contactuser.png"
-const Contact:React.FC = () => {
+import Swal from "sweetalert2";
+import ReCAPTCHA from "react-google-recaptcha";
+import call from "./../assets/call.png";
+import email from "./../assets/email.png";
+import user from "./../assets/contactuser.png";
+const Contactsection: React.FC = () => {
   const [valid, setData] = useState(null);
-  function onChange(value:any) {
+  function onChange(value: any) {
     setData(value);
   }
-  const handalSubmit = async (e:any) => {
+  const handalSubmit = async (e: any) => {
     e.preventDefault();
     const target = e.target;
     const formData = new FormData();
@@ -57,13 +57,11 @@ const Contact:React.FC = () => {
       });
     }
   };
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+ 
   return (
-    <div className="contact relative lg:h-[752px] h-auto max-w-[1440px] mx-auto">
+    <div className=" relative lg:h-[752px] h-auto max-w-[1240px] mx-auto lg:mt-[120px] mt-[80px] ">
       <div className="flex justify-between items-center max-w-[1240px] mx-auto gap-36 lg:pt-[81px]">
-        <div className="contact-content lg:w-1/2">
+        <div className="contact-content lg:w-[400px]">
           <h1 className="text-black text-[64px] font-bold leading-[76.8px]">
             Contact Us
           </h1>
@@ -83,8 +81,8 @@ const Contact:React.FC = () => {
             </div>
           </div>
         </div>
-        <div className=" lg:w-1/2">
-          <div className="bg-white w-[475px] h-[609px] rounded-[20px] py-[36px] px-[20px]">
+        <div className=" lg:w-[422px] border bg-white rounded-xl h-[609px] ">
+          <div className="bg-white  rounded-[20px] py-[36px] px-[20px]">
             <form
               onSubmit={(e) => handalSubmit(e)}
               className="flex  flex-col gap-2"
@@ -130,11 +128,11 @@ const Contact:React.FC = () => {
           </div>
         </div>
       </div>
-      <div className='absolute bottom-0 left-[30%]'>
-        <img src={user} alt="" />
+      <div className="absolute bottom-0 left-[30%]">
+        <img className="w-[418px] h-[636px]" src={user} alt="" />
       </div>
     </div>
   );
 };
 
-export default Contact;
+export default Contactsection;
