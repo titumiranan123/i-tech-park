@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Mousewheel } from "swiper/modules";
+import { motion } from "framer-motion"; // Import Framer Motion
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/mousewheel";
@@ -81,9 +82,11 @@ const Teammember: React.FC = () => {
       {/* Left-side Text Navigation */}
       <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] p-4 flex flex-col justify-center space-y-4">
         {slides.map((slide, index) => (
-          <button
+          <motion.button
             key={index}
             onClick={() => handleTextNavigationClick(index)}
+            whileHover={{ scale: 1.05 }} // Hover effect
+            whileTap={{ scale: 0.95 }} // Tap effect
             className={`text-lg flex items-center text-left transition-all duration-300 text-black ${
               index === activeIndex
                 ? "ms-1 text-[24px] lg:text-[32px] leading-[38.4px] font-bold"
@@ -98,7 +101,7 @@ const Teammember: React.FC = () => {
               } `}
             ></span>
             {slide.nav}
-          </button>
+          </motion.button>
         ))}
       </div>
 
@@ -116,7 +119,13 @@ const Teammember: React.FC = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="flex flex-col lg:flex-row gap-5 bg-[#F04B23] p-6 lg:p-8 rounded-lg shadow-lg">
+              <motion.div
+                initial={{ opacity: 0, x: 50 }} // Initial slide-in state
+                animate={{ opacity: 1, x: 0 }} // On animation state
+                exit={{ opacity: 0, x: -50 }} // On exit state
+                transition={{ duration: 0.5 }} // Duration of animation
+                className="flex flex-col lg:flex-row gap-5 bg-[#F04B23] p-6 lg:p-8 rounded-lg shadow-lg"
+              >
                 <img
                   src={slide.image}
                   className="w-full lg:w-[305px] h-[250px] lg:h-[333px] rounded-[20px] object-cover"
@@ -133,7 +142,7 @@ const Teammember: React.FC = () => {
                     {slide.content}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>

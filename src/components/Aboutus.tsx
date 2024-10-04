@@ -45,7 +45,7 @@ const Aboutus: React.FC = () => {
   return (
     <div className="lg:mt-[120px] md:mt-[80px] mt-[40px] max-w-[1240px] mx-auto flex lg:flex-row flex-col items-center lg:justify-between gap-8 px-4">
       <div
-        className="lg:w-1/2 w-full"
+        className="lg:w-1/2 w-full overflow-x-hidden"
         data-aos="fade-right" // AOS for smooth scrolling animation
       >
         <motion.img
