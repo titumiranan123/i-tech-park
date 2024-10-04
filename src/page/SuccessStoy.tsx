@@ -4,7 +4,7 @@ import Successcard from '../components/Successcard';
 import img from './../assets/user.png'
 const SuccessStoy:React.FC = () => {
     return (
-      <div className='max-w-[1240px] mx-auto mt-[150px]'>
+      <div className='max-w-[1240px] mx-auto mt-[120px]'>
         <Heading
           title="Our Success Story"
           subtitle="We priotize your success with customized strategies , delivering outstanding results"
