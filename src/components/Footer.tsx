@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-black">
+    <div className="bg-black lg:px-0 px-4">
       <div className="max-w-[1240px] mx-auto flex flex-col">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-16 gap-8">
           {/* Logo and Description Section */}
@@ -217,9 +217,9 @@ const Footer: React.FC = () => {
 
         {/* Footer Bottom Line and Rights Section */}
         <div className="-mt-5" data-aos="zoom-in">
-          <div className="w-[1240px] h-[1px] bg-white"></div>
+          {/* <div className="lg:w-[1240px] h-[1px] bg-white"></div> */}
           <div
-            className="text-white text-[20px] regular flex justify-center items-center mb-6 mt-4"
+            className="text-white text-[20px] regular flex justify-center items-center text-center mb-6 mt-4"
             data-aos="fade-up"
           >
             © 2024 I -Tech Park BD. All Rights Reserved.
