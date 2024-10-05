@@ -17,8 +17,8 @@ const Navbar = () => {
       <Link
         className={` flex openSans   text-[20px] font-[400]   my-auto justify-center items-center  h-[33px] max-w-48  px-4 py-2  ${className} ${
           isActive
-            ? "  rounded-[30px]      bg-[#000000]  flex justify-center items-center   text-white  "
-            : "text-black"
+            ? "  rounded-[30px]   semibold   bg-[#000000]  flex justify-center items-center   text-white  "
+            : "text-black regular"
         } `}
         to={href}
       >
@@ -58,7 +58,7 @@ const Navbar = () => {
             title={"Contact"}
           />
         </div>
-        <div className="justify-center items-center    lg:flex hidden w-[171px] h-[55px] border py-4 px-8 rounded-[40px] text-[20px] font-[400] ">
+        <div className="justify-center items-center border-[#000030]    lg:flex hidden w-[181px] h-[55px] border py-4 px-8 rounded-[40px] text-[20px] font-[400] regular">
           Call a Book
         </div>
         <div className="lg:hidden text-[#6e6a6a] ">
@@ -106,7 +106,7 @@ const Navbar = () => {
         </div>
       </nav>
       {!open && (
-        <div className="absolute z-50 top-4 bg-[#3ca3f7] text-white w-full p-5 rounded-xl lg:hidden">
+        <div className="absolute z-50 top-0 left-0  bg-[#3ca3f7] text-white w-full p-5 rounded-xl lg:hidden">
           <svg
             onClick={toggoleNav}
             className={`rotate-45 flex justify-end h-9 float-end w-9 transform origin-center transition duration-150 ease-out ${
@@ -155,8 +155,6 @@ const Navbar = () => {
                 title={"About"}
               />{" "}
             </div>{" "}
-           
-            
             <div onClick={toggoleNav}>
               <CustomLink
                 href={"/contact"}

@@ -64,18 +64,22 @@ const Header: React.FC = () => {
             <div className="lg:w-1/2">
               <h1
                 data-aos="fade-up"
-                className="text-black  lg:text-[56px] md:text-[48px] text-[34px] leading-[35px] flex items-center lg:leading-[67px] bold md:leading-[64px] md:text-left"
+                className="text-black  lg:text-[56px] md:text-[56px] text-[34px] leading-[35px] flex items-center lg:leading-[67px] bold md:leading-[64px] md:text-left"
               >
                 Result Driven <br />
                 Digital Agency
               </h1>
-              <img className="absolute left-[16%] top-32 z-20" src={arrowg} alt="" />
+              <img
+                className="absolute left-[16%] lg:h-[280px] lg:w-[180px] w-[100px] h-[240px] top-40 md:top-32 -z-10"
+                src={arrowg}
+                alt=""
+              />
             </div>
             <div className="lg:w-1/2">
               <p
                 data-aos="fade-up"
                 data-aos-delay="200"
-                className="opensans  font-[600] text-[14px] leading-[16px] md:text-[16px] lg:text-[20px] text-[#080808] md:leading-[25.6px] "
+                className="regular text-[14px] leading-[16px] md:text-[18px] lg:text-[20px] text-[#080808] md:leading-[25.6px] "
               >
                 I-Tech Park BD serves as your Digital Marketing Partner in all
                 ways possible. From Social Media Marketing, WordPress
@@ -96,7 +100,7 @@ const Header: React.FC = () => {
                 <Link
                   to={"https://calendly.com/imonofficial2/30min?month=2024-07"}
                   target="_blank"
-                  className="py-4 px-6 border bg-black rounded-[16px] flex justify-center items-center opensans font-[700] md:text-[20px] text-white shadow text-[12px] gap-2"
+                  className="py-3 px-6 w-[180px] md:w-[230px]  bg-black rounded-[40px] flex justify-center items-center opensans font-[400] md:text-[20px] text-white shadow text-[12px] gap-2 z-20"
                 >
                   Book a Call
                   <img className="md:w-8 md:h-8 w-6 h-6" src={arrow} alt="" />
@@ -104,7 +108,7 @@ const Header: React.FC = () => {
                 <Link
                   to={"https://montagemotion.com/work/video-editing"}
                   target="_blank"
-                  className="py-4 px-6 border rounded-[16px] flex justify-center items-center opensans font-[700] text-[12px] text-black md:text-[20px]"
+                  className="py-4 px-6 border rounded-[40px] md:w-[230px] w-[180px] flex justify-center border-[#000030] items-center opensans font-[400] text-[12px] text-black md:text-[20px]"
                 >
                   See Our Works
                 </Link>
@@ -117,7 +121,7 @@ const Header: React.FC = () => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="rounded-[28px] overflow-hidden lg:scale-100 scale-95  bg-black lg:w-[993px] lg:h-[562px] md:w-[720px]  md:h-[400px] w-full h-[200px] mx-auto relative"
+            className="rounded-[28px] overflow-hidden lg:scale-100 scale-95  bg-white lg:w-[1200px] lg:h-[679px] md:w-[720px]  md:h-[405px] w-[320px] h-[180px] mx-auto relative"
           >
             {isImageVisible && (
               <div
@@ -126,7 +130,7 @@ const Header: React.FC = () => {
               >
                 <img
                   src={img}
-                  className="lg:w-[993px] lg:h-[562px]"
+                  className="lg:w-[1200px] lg:h-[679px] md:w-[720px]  md:h-[405px]"
                   alt="Displayed"
                 />
                 <div
@@ -137,7 +141,6 @@ const Header: React.FC = () => {
                     transform: "translate(-50%, -50%)",
                   }}
                   className="absolute lg:top-[28%] md:top-[30%] top-[35%] md:h-[80px] md:w-[80px] img-fluid md:left-[39%]  lg:left-[44%] left-[44%]"
-                  
                 >
                   <Pulsebutton onHideImage={handleHideImage} />
                 </div>
@@ -148,7 +151,7 @@ const Header: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className="lg:w-[993px] lg:h-[562px] md:w-[720px] md:h-[400px] w-full h-[200px] flex justify-center items-center mx-auto"
+                className="lg:w-[1200px] lg:h-[679px] md:w-[720px] md:h-[405px] w-[320px] h-[180px] flex justify-center items-center mx-auto"
               >
                 <ReactPlayer
                   url={"https://www.youtube.com/watch?v=4HQs-yyCrrk"}
@@ -156,14 +159,13 @@ const Header: React.FC = () => {
                   height={"100%"}
                   width={"100%"}
                   controls
-                  className="lg:w-[993px] lg:h-[562px] md:w-[720px] md:h-[400px] w-full h-[200px]"
+                  className="lg:w-[993px] lg:h-[562px] md:w-[720px] md:h-[400px] w-[300px] h-[200px]"
                 />
               </motion.div>
             )}
           </motion.div>
         </div>
       </div>
-      
     </motion.div>
   );
 };

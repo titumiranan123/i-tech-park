@@ -4,12 +4,12 @@ import Successcard from '../components/Successcard';
 import img from './../assets/user.png'
 const SuccessStoy:React.FC = () => {
     return (
-      <div className='max-w-[1240px] mx-auto mt-[120px]'>
+      <div className='max-w-[1240px] mx-auto lg:mt-[120px] mt-[80px] mb-[100px] lg:mb-[139px]  lg:px-0 px-4'>
         <Heading
           title="Our Success Story"
           subtitle="We priotize your success with customized strategies , delivering outstanding results"
         />
-        <div className='mt-16 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2'>
+        <div className='mt-16 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5'>
           <Successcard
             img={img}
             name="John Doe"

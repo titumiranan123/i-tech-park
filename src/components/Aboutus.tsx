@@ -88,7 +88,7 @@ const Aboutus: React.FC = () => {
           transition={{ delay: 1.2, duration: 1 }}
         >
           <motion.div
-            className="py-4 px-6 w-[180px] lg:w-[230px] mt-[32px] lg:mt-[64px] bg-black rounded-[16px] flex justify-center items-center opensans font-[600] text-white shadow text-[14px] lg:text-[20px] gap-2 mx-auto lg:mx-0"
+            className="py-4 px-6 w-[180px] lg:w-[230px] mt-[32px] lg:mt-[64px] bg-black rounded-[40px] flex justify-center items-center opensans font-[600] text-white shadow text-[14px] lg:text-[20px] gap-2 mx-auto lg:mx-0"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap" // Button hover and tap animation using Framer Motion

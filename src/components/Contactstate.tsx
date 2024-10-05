@@ -100,7 +100,7 @@ const Contactstate: React.FC = () => {
             <Link
               to={"https://calendly.com/imonofficial2/30min?month=2024-07"}
               target="_blank"
-              className="py-3 sm:py-4 px-4 sm:px-6 bg-[#F04B23] rounded-[16px] flex justify-center items-center opensans font-[600] text-white shadow-md text-[12px] sm:text-[14px] lg:text-[20px] gap-2 w-full lg:w-auto"
+              className="py-3 sm:py-4 px-4 sm:px-6 bg-[#F04B23] rounded-[40px] flex justify-center items-center opensans font-[600] text-white shadow-md text-[12px] sm:text-[14px] lg:text-[20px] gap-2 w-full lg:w-auto"
               data-aos="zoom-in" // AOS animation for button
             >
               Book a Call
