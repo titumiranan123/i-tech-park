@@ -112,3 +112,53 @@ section.bg-gray {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  border-radius: 50%;
+  border: 1px solid #FFFFFF;
+  color: #ffffff;
+  /* Color of the icon */
+  font-size: 20px;
+  /* Size of the icon */
+  cursor: pointer;
+  z-index: 10;
+}
+
+.swiper-button-prev-custom {
+  left: 678px;
+
+  rotate: 90deg;
+  /* Position the previous button */
+}
+
+.swiper-button-next-custom {
+  
+  right: 28px;
+  /* Position the next button */
+  rotate: 90deg;
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 640px) {
+  .swiper-button-prev-custom {
+    left: 256px;
+    /* Adjust the position for mobile screens */
+    font-size: 18px;
+    /* Slightly smaller icon size */
+  }
+
+  .swiper-button-next-custom {
+    right: 0px;
+    /* Adjust the position for mobile screens */
+    font-size: 18px;
+    /* Slightly smaller icon size */
+  }
+}

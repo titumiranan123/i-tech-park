@@ -5,9 +5,10 @@ import { Navigation, Mousewheel } from "swiper/modules";
 import { motion } from "framer-motion"; // Import Framer Motion
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/mousewheel";
 import design from "./../assets/team-1.png";
-
+import Nested from "./Nested";
 interface Slide {
   nav: string;
   slides: Array<{
@@ -146,36 +147,9 @@ const Teammember: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }} // On animation state
                 exit={{ opacity: 0, x: -50 }} // On exit state
                 transition={{ duration: 0.5 }} // Duration of animation
-                className="flex flex-col lg:flex-row gap-5 bg-[#F04B23] h-[420px] p-6 lg:p-8 rounded-lg shadow-lg"
+                className=" bg-[#F04B23] h-[420px] "
               >
-                <Swiper
-                  navigation={true}
-                  modules={[Navigation, Mousewheel]}
-                  className="mySwiper"
-                >
-                  {slide.slides.map((s, idx) => (
-                    <SwiperSlide key={idx}>
-                      <div className="flex flex-col lg:flex-row gap-5 bg-[#F04B23] h-[420px] p-6 lg:p-8 rounded-lg shadow-lg">
-                        <img
-                          src={s.image}
-                          className="w-full lg:w-[305px] h-[250px] lg:h-[333px] rounded-[20px] object-cover"
-                          alt={s.title}
-                        />
-                        <div className="mt-4 lg:mt-6">
-                          <h1 className="text-[24px] lg:text-[32px] leading-[32px] lg:leading-[47.6px] text-white font-bold">
-                            {s.title}
-                          </h1>
-                          <p className="text-white mt-1 text-[16px] lg:text-[20px] leading-[24px] font-semibold">
-                            Founder & Chief Executive Officer
-                          </p>
-                          <p className="text-[14px] lg:text-[16px] mt-6 lg:mt-8 font-normal text-white">
-                            {s.content}
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+                <Nested data={slide.slides} />
               </motion.div>
             </SwiperSlide>
           ))}
