@@ -7,8 +7,25 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel";
-import design from "./../assets/team-1.png";
+import design1 from "./../assets/service/design1.png";
+import design2 from "./../assets/service/design2.png";
+import design3 from "./../assets/service/design3.png";
+import design4 from "./../assets/service/design4.png";
+import web1 from "./../assets/service/web1.png";
+import web2 from "./../assets/service/web2.png";
+import web3 from "./../assets/service/web3.png";
+import seo1 from "./../assets/service/seo1.png";
+import seo2 from "./../assets/service/seo2.png";
+import seo3 from "./../assets/service/seo3.png";
+import social1 from "./../assets/service/social1.png";
+import social2 from "./../assets/service/social2.png";
+import social3 from "./../assets/service/social3.png";
+import video1 from "./../assets/service/video1.png";
+import virtual1 from "./../assets/service/virtual1.png";
+import business1 from "./../assets/service/business.png";
 import Nested from "./Nested";
+
+
 interface Slide {
   nav: string;
   slides: Array<{
@@ -21,22 +38,33 @@ interface Slide {
 const Teammember: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<any>(null);
-
   const slides: Slide[] = [
     {
       nav: "Design",
       slides: [
         {
-          title: "Design",
+          title: "Graphic Design",
           content:
-            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing. WordPress Customization to ranking your website in search engines (SEO) . we assist you in your digital presence.",
-          image: design,
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: design1,
         },
         {
-          title: "Design2",
+          title: "Motion Poster",
           content:
-            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing. WordPress Customization to ranking your website in search engines (SEO) . we assist you in your digital presence.",
-          image: design,
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: design2,
+        },
+        {
+          title: "UI/UX",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: design3,
+        },
+        {
+          title: "Logo Animation",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: design4,
         },
       ],
     },
@@ -44,54 +72,104 @@ const Teammember: React.FC = () => {
       nav: "Web Development",
       slides: [
         {
-          title: "E-Comerce",
+          title: "Custom Code",
           content:
-            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing. WordPress Customization to ranking your website in search engines (SEO) . we assist you in your digital presence.",
-          image: design,
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: web1,
         },
         {
-          title: "E-Comerce 2",
+          title: "WordPress",
           content:
-            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing. WordPress Customization to ranking your website in search engines (SEO) . we assist you in your digital presence.",
-          image: design,
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: web2,
+        },
+        {
+          title: "Shopify",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: web3,
         },
       ],
     },
-    // {
-    //   nav: "Video Editing",
-    //   title: "Billie Pierce",
-    //   content:
-    //     "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing. WordPress Customization to ranking your website in search engines (SEO) . we assist you in your digital presence.",
-    //   image: design,
-    // },
-    // {
-    //   nav: "Search Engine Marketing",
-    //   title: "Graphic Design",
-    //   content:
-    //     "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing. WordPress Customization to ranking your website in search engines (SEO) . we assist you in your digital presence.",
-    //   image: design,
-    // },
-    // {
-    //   nav: "Social Media Marketing",
-    //   title: "Bernadette Newman",
-    //   content:
-    //     "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing. WordPress Customization to ranking your website in search engines (SEO) . we assist you in your digital presence.",
-    //   image: design,
-    // },
-    // {
-    //   nav: "Business Consultation",
-    //   title: "Bernadette Newman",
-    //   content:
-    //     "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing. WordPress Customization to ranking your website in search engines (SEO) . we assist you in your digital presence.",
-    //   image: design,
-    // },
-    // {
-    //   nav: "Virtual Assistent",
-    //   title: "Bernadette Newman",
-    //   content:
-    //     "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing. WordPress Customization to ranking your website in search engines (SEO) . we assist you in your digital presence.",
-    //   image: design,
-    // },
+    {
+      nav: "Video Editing",
+      slides: [
+        {
+          title: "Video Editing",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: video1,
+        },
+      ],
+    },
+    {
+      nav: "Search Engine Marketing",
+      slides: [
+        {
+          title: "YouTube SEO",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: seo1,
+        },
+        {
+          title: "SEO",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: seo2,
+        },
+        {
+          title: "Google Ads",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: seo3,
+        },
+      ],
+    },
+    {
+      nav: "Social Media Marketing",
+      slides: [
+        {
+          title: "Organic Social Media",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: social1,
+        },
+        {
+          title: "Paid Social Media",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: social2,
+        },
+        {
+          title: "Monetization",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: social3,
+        },
+      ],
+    },
+    {
+      nav: "Business Consultation",
+      slides: [
+        {
+          title: "Business Consultation",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: business1,
+        },
+      ],
+    },
+    {
+      nav: "Virtual Assistant",
+      slides: [
+        {
+          title: "Virtual Assistant",
+          content:
+            "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+          image: virtual1,
+        },
+      ],
+    },
   ];
 
   const handleTextNavigationClick = (index: number) => {

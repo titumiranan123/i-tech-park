@@ -145,7 +145,15 @@ section.bg-gray {
   /* Position the next button */
   rotate: 90deg;
 }
-
+.swiper-button-prev-custom, .swiper-button-next-custom {
+  z-index: 20; /* Ensure buttons are always on top */
+}
+.relative{
+  position: relative !important;
+}
+.index{
+  z-index: 99999;
+}
 /* Adjustments for mobile screens */
 @media (max-width: 640px) {
   .swiper-button-prev-custom {
