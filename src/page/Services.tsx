@@ -38,6 +38,7 @@ interface Slide {
 const Teammember: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<any>(null);
+  const mainSlide = useRef<any>(null);
   const slides: Slide[] = [
     {
       nav: "Design",
@@ -179,9 +180,9 @@ const Teammember: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between lg:flex-row max-w-[1240px] items-center gap-10 mx-auto mt-[60px] lg:mt-[120px] lg:px-0 px-4">
+    <div className="flex flex-col justify-between lg:flex-row max-w-[1240px] items-center gap-2 mx-auto mt-[60px] lg:mt-[120px] lg:px-0 px-4 ">
       {/* Left-side Text Navigation */}
-      <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] p-4 flex flex-col justify-center space-y-4">
+      <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] p-4 flex flex-col justify-center space-y-4 ">
         {slides.map((slide, index) => (
           <motion.button
             key={index}
@@ -207,7 +208,7 @@ const Teammember: React.FC = () => {
       </div>
 
       {/* Main Slider */}
-      <div className="w-full lg:w-[780px] lg:h-[440px] rounded-xl overflow-hidden">
+      <div className="w-full  lg:w-[743px] lg:h-[730px] rounded-xl overflow-hidden  ">
         <Swiper
           direction="vertical"
           spaceBetween={30}
@@ -216,7 +217,8 @@ const Teammember: React.FC = () => {
           modules={[Navigation, Mousewheel]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-          className="w-full h-[530px] lg:h-[415px]"
+          className="w-full lg:h-[730px] "
+          ref={mainSlide}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
@@ -225,7 +227,7 @@ const Teammember: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }} // On animation state
                 exit={{ opacity: 0, x: -50 }} // On exit state
                 transition={{ duration: 0.5 }} // Duration of animation
-                className=" bg-[#F04B23] h-[420px] "
+                className=" bg-[#F04B23] lg:h-[730px] "
               >
                 <Nested data={slide.slides} />
               </motion.div>

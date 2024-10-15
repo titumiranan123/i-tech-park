@@ -177,7 +177,7 @@ const Footer: React.FC = () => {
             className="text-white text-[20px] regular flex justify-center items-center text-center mb-6 mt-4"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1,y:0 }}
-            transition={{ duration: 2.2 }}
+            transition={{ duration: 4.2 }}
           >
             © 2024 I -Tech Park BD. All Rights Reserved.
           </motion.div>

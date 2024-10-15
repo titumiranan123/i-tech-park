@@ -97,6 +97,9 @@ section.bg-gray {
     flex-direction: column;
     gap: 16px;
   }
+  .swiper{
+    height: 450px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -134,7 +137,6 @@ section.bg-gray {
 
 .swiper-button-prev-custom {
   left: 678px;
-
   rotate: 90deg;
   /* Position the previous button */
 }
@@ -169,4 +171,79 @@ section.bg-gray {
     font-size: 18px;
     /* Slightly smaller icon size */
   }
+}
+
+
+:root{
+  --swiper-navigation-color:#fff;
+  --swiper-navigation-size:26px !important;
+}
+
+.teamswiper .swiper-horizontal .swiper-button-prev{
+   left:  746px !important;
+    right: auto;
+    rotate: 90deg;
+    top: 38% !important;
+    background-color: #000000;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+
+.swiper-button-prev{
+    left:  700px !important;
+    right: auto;
+    rotate: 90deg;
+    top: 40% !important;
+    background-color: #000000;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+.swiper-button-next{
+    right: 3px !important;
+    rotate: 90deg;
+    top: 48% !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #000000;
+    border-radius: 100%;
+}
+.swiper-button-disabled {
+    opacity: 0.5;  /* Make it look disabled */
+    pointer-events: none;  /* Prevent clicks */
+}
+
+@media (max-width: 640px) {
+  .slider {
+    padding-top: 1rem;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .swiper{
+    height: 450px;
+  }
+  .swiper-button-prev{
+    left:  283px !important;
+    right: auto;
+    rotate: 90deg;
+    top: 38% !important;
+    background-color: #000000;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+.teamswiper{
+  height: 620px;
+}
+ .teamswiper .swiper-horizontal .swiper-button-prev{
+   left:  283px !important;
+    right: auto;
+    rotate: 90deg;
+    top: 38% !important;
+    background-color: #000000;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
 }
