@@ -60,7 +60,7 @@ const Contactstate: React.FC = () => {
         >
           <motion.h1
             variants={textVariants}
-            className="text-white font-bold text-[24px] sm:text-[28px] lg:text-[32px] text-center lg:text-left"
+            className="text-white bold text-[24px] sm:text-[28px] lg:text-[32px] text-center lg:text-left"
           >
             Have a Project?
           </motion.h1>
@@ -74,11 +74,13 @@ const Contactstate: React.FC = () => {
             />
             <motion.div
               variants={itemVariants}
-              className="text-white text-center lg:text-left text-[16px] sm:text-[18px] lg:text-[20px] font-[400]"
+              className="text-white  lg:text-left text-[16px] sm:text-[18px] lg:text-[20px] font-[400]"
               data-aos="fade-left" // AOS animation for text
             >
-              <p className="uppercase">GET A free consultation</p>
-              <p>+8801521331108</p>
+              <p className="uppercase text-left regular">
+                GET A free consultation
+              </p>
+              <p className="text-left regular">+8801521331108</p>
             </motion.div>
           </div>
         </motion.div>
@@ -90,22 +92,25 @@ const Contactstate: React.FC = () => {
         >
           <motion.div
             variants={textVariants}
-            className="text-white text-center lg:text-left w-full lg:w-2/3 text-[14px] sm:text-[16px] lg:text-[18px]"
+            className="text-white text-center lg:text-left w-full lg:w-2/3 text-[14px] sm:text-[16px] lg:text-[18px] regular"
           >
             We offer various top-notch services to cater to your needs in the
             digital arena. Need a consultation? Make an appointment. Our
             experienced consultant will reach out at your preferred time.
           </motion.div>
-          <motion.div variants={itemVariants} className="w-full lg:w-auto">
+          <motion.div
+            variants={itemVariants}
+            className="w-full lg:w-auto flex justify-center"
+          >
             <Link
               to={"https://calendly.com/imonofficial2/30min?month=2024-07"}
               target="_blank"
-              className="py-3 sm:py-4 px-4 sm:px-6 bg-[#F04B23] rounded-[40px] flex justify-center items-center opensans font-[600] text-white shadow-md text-[12px] sm:text-[14px] lg:text-[20px] gap-2 w-full lg:w-auto"
+              className=" sm:py-4  sm:px-6 bg-[#F04B23] py-3 px-6 w-[180px] md:w-[230px]   rounded-[40px] flex justify-center items-center opensans font-[600] md:text-[20px] md:leading-[27.24px] text-white shadow text-[12px] gap-2 z-20"
               data-aos="zoom-in" // AOS animation for button
             >
               Book a Call
               <img
-                className="sm:w-6 sm:h-6 lg:w-8 lg:h-8"
+                className="md:w-[36px] md:h-[36px] w-6 h-6"
                 src={arrow}
                 alt="arrow"
               />

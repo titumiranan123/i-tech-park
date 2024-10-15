@@ -35,7 +35,7 @@ interface Slide {
   }>;
 }
 
-const Teammember: React.FC = () => {
+const TextNavigationSlider: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<any>(null);
   const mainSlide = useRef<any>(null);
@@ -180,31 +180,36 @@ const Teammember: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between lg:flex-row max-w-[1240px] items-center gap-2 mx-auto mt-[60px] lg:mt-[120px] lg:px-0 px-4 ">
+    <div className="flex flex-col justify-between lg:flex-row max-w-[1240px] items-center gap-10 md:gap-10 lg:gap-3 mx-auto mt-[60px] lg:mt-[120px] lg:px-0 px-4 ">
       {/* Left-side Text Navigation */}
-      <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] p-4 flex flex-col justify-center space-y-4 ">
-        {slides.map((slide, index) => (
-          <motion.button
-            key={index}
-            onClick={() => handleTextNavigationClick(index)}
-            whileHover={{ scale: 1.05 }} // Hover effect
-            whileTap={{ scale: 0.95 }} // Tap effect
-            className={`text-lg flex items-center text-left transition-all duration-300 text-black ${
-              index === activeIndex
-                ? "ms-1 text-[24px] lg:text-[32px] leading-[38.4px] font-bold"
-                : "regular text-[20px] lg:text-[30px]"
-            } `}
-          >
-            <span
-              className={`${
+      <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] ">
+        <h1 className="bold lg:text-[64px] text-[28px] leading-[32px] md:text-[40px] lg:leading-[76.8px]">
+          Services
+        </h1>
+        <div className="flex flex-col justify-center lg:space-y-4 md:space-y-3 space-y-1 mt-[24px]">
+          {slides.map((slide, index) => (
+            <motion.button
+              key={index}
+              onClick={() => handleTextNavigationClick(index)}
+              whileHover={{ scale: 1.05 }} // Hover effect
+              whileTap={{ scale: 0.95 }} // Tap effect
+              className={`text-lg flex items-center text-left transition-all duration-300   text-black ${
                 index === activeIndex
-                  ? "h-[20px] lg:h-[27px] w-[3px] lg:w-[5px] me-1 bg-[#F04B23]"
-                  : ""
+                  ? "ms-1 text-[24px] md:text-[28px] md:leading-[32px]  lg:text-[32px] lg:leading-[38.4px] bold"
+                  : "regular text-[20px] leading-[24px] lg:text-[30px] md:text-[26px] md:leading-[28px]"
               } `}
-            ></span>
-            {slide.nav}
-          </motion.button>
-        ))}
+            >
+              <span
+                className={`${
+                  index === activeIndex
+                    ? "h-[20px] md:h-[27px] w-[3px] md:w-[5px] me-1 bg-[#F04B23]"
+                    : ""
+                } `}
+              ></span>
+              {slide.nav}
+            </motion.button>
+          ))}
+        </div>
       </div>
 
       {/* Main Slider */}
@@ -239,4 +244,4 @@ const Teammember: React.FC = () => {
   );
 };
 
-export default Teammember;
+export default TextNavigationSlider;

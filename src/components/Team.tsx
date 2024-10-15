@@ -29,6 +29,7 @@ import digi8 from "./../assets/member/digitalmarketer8.png";
 import digi10 from "./../assets/member/digitalmarketer10.png";
 
 import Nestedmember from "./Nestedmember";
+import Heading from "./Heading";
 
 interface Slide {
   nav: string;
@@ -221,59 +222,66 @@ const Teammember: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between lg:flex-row max-w-[1240px] items-center gap-2 mx-auto mt-[60px] lg:mt-[120px] lg:px-0 px-4 ">
-      {/* Left-side Text Navigation */}
-      <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] p-4 flex flex-col justify-center space-y-4 ">
-        {slides.map((slide, index) => (
-          <motion.button
-            key={index}
-            onClick={() => handleTextNavigationClick(index)}
-            whileHover={{ scale: 1.05 }} // Hover effect
-            whileTap={{ scale: 0.95 }} // Tap effect
-            className={`text-lg flex items-center text-left transition-all duration-300 text-black ${
-              index === activeIndex
-                ? "ms-1 text-[24px] lg:text-[32px] leading-[38.4px] font-bold"
-                : "regular text-[20px] lg:text-[30px]"
-            } `}
-          >
-            <span
-              className={`${
-                index === activeIndex
-                  ? "h-[20px] lg:h-[27px] w-[3px] lg:w-[5px] me-1 bg-[#F04B23]"
-                  : ""
-              } `}
-            ></span>
-            {slide.nav}
-          </motion.button>
-        ))}
-      </div>
+    <div className="max-w-[1240px] mx-auto mt-[60px] lg:mt-[120px]">
+      <Heading
+        title="Our Team"
+        subtitle="Our team is a dynamic blend of creativity, expertise and dedication, who are passionate about driving your success."
+      />
+      <div className="flex flex-col mt-[30px] justify-between lg:flex-row max-w-[1240px] items-center lg:gap-2 mx-auto  lg:px-0 px-4 gap-16 md:gap-10">
+        {/* Left-side Text Navigation */}
 
-      {/* Main Slider */}
-      <div className="w-full  lg:w-[827px] lg:h-[453px] rounded-xl overflow-hidden  h-[620px] ">
-        <Swiper
-          direction="vertical"
-          spaceBetween={30}
-          slidesPerView={1}
-          mousewheel={true}
-          modules={[Navigation, Mousewheel]}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-          className="w-full teamswiper lg:h-[453px] h-[620px]"
-        >
+        <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] flex flex-col justify-center lg:space-y-4 md:space-y-3 space-y-1 mt-[24px]">
           {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <motion.div
-                initial={{ opacity: 0, x: 50 }} // Initial slide-in state
-                animate={{ opacity: 1, x: 0 }} // On animation state
-                exit={{ opacity: 0, x: -50 }} // On exit state
-                transition={{ duration: 0.5 }} // Duration of animation
-                className=" bg-[#F04B23] w-full h-full "
-              >
-                <Nestedmember data={slide.slides} />
-              </motion.div>
-            </SwiperSlide>
+            <motion.button
+              key={index}
+              onClick={() => handleTextNavigationClick(index)}
+              whileHover={{ scale: 1.05 }} // Hover effect
+              whileTap={{ scale: 0.95 }} // Tap effect
+              className={`text-lg flex items-center text-left transition-all duration-300   text-black ${
+                index === activeIndex
+                  ? "ms-1 text-[24px] md:text-[28px] md:leading-[32px]  lg:text-[32px] lg:leading-[38.4px] bold"
+                  : "regular text-[20px] leading-[24px] lg:text-[30px] md:text-[26px] md:leading-[28px]"
+              } `}
+            >
+              <span
+                className={`${
+                  index === activeIndex
+                    ? "h-[20px] md:h-[27px] w-[3px] md:w-[5px] me-1 bg-[#F04B23]"
+                    : ""
+                } `}
+              ></span>
+              {slide.nav}
+            </motion.button>
           ))}
-        </Swiper>
+        </div>
+
+        {/* Main Slider */}
+        <div className="w-full  lg:w-[827px] lg:h-[453px] rounded-xl overflow-hidden  h-[620px] ">
+          <Swiper
+            direction="vertical"
+            spaceBetween={30}
+            slidesPerView={1}
+            mousewheel={true}
+            modules={[Navigation, Mousewheel]}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            className="w-full teamswiper lg:h-[453px] h-[620px]"
+          >
+            {slides.map((slide, index) => (
+              <SwiperSlide key={index}>
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }} // Initial slide-in state
+                  animate={{ opacity: 1, x: 0 }} // On animation state
+                  exit={{ opacity: 0, x: -50 }} // On exit state
+                  transition={{ duration: 0.5 }} // Duration of animation
+                  className=" bg-[#F04B23] w-full h-full "
+                >
+                  <Nestedmember data={slide.slides} />
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </div>
   );

@@ -13,12 +13,12 @@ const Home:React.FC = () => {
     <div>
       <Header />
       <TextNavigationSlider />
-      <Contactstate />
-      <Aboutus />
-      <State />
-      <Teammember />
+    <Contactstate />
+        <Aboutus />
+     <State />
+        <Teammember />
       <Successsection />
-      <Contactsection />
+      <Contactsection /> 
     </div>
   );
 };

@@ -62,7 +62,7 @@ const Aboutus: React.FC = () => {
         data-aos="fade-left" // AOS for basic scroll effect
       >
         <motion.h1
-          className="bold text-[36px] lg:text-[64px] leading-[48px] lg:leading-[76.8px]"
+          className="bold text-left text-[36px] lg:text-[64px] leading-[48px] lg:leading-[76.8px]"
           initial="hidden"
           animate="visible"
           variants={textVariants} // Advanced text entry animation
@@ -70,7 +70,7 @@ const Aboutus: React.FC = () => {
           About Us
         </motion.h1>
         <motion.p
-          className="regular text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px]"
+          className="regular text-left text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px]"
           initial="hidden"
           animate="visible"
           variants={textVariants} // Delayed text animation for paragraph
@@ -86,9 +86,10 @@ const Aboutus: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
+          className=""
         >
           <motion.div
-            className="py-4 px-6 w-[180px] lg:w-[230px] mt-[32px] lg:mt-[64px] bg-black rounded-[40px] flex justify-center items-center opensans font-[600] text-white shadow text-[14px] lg:text-[20px] gap-2 mx-auto lg:mx-0"
+            className="py-4 px-6 w-[180px] lg:w-[230px] mt-[32px] lg:mt-[64px] bg-black rounded-[40px] flex justify-center items-center opensans font-[600] text-white shadow text-[14px] lg:text-[20px] gap-2  lg:mx-0"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap" // Button hover and tap animation using Framer Motion
