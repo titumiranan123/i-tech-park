@@ -105,7 +105,7 @@ const Navbar = () => {
         </div>
       </nav>
       {!open && (
-        <div className="absolute z-50 top-0 left-0  bg-[#3ca3f7] text-white w-full p-5 rounded-xl lg:hidden">
+        <div className="absolute z-50 top-0 left-0  bg-[#F04B23] text-white w-full p-5 rounded-xl lg:hidden">
           <svg
             onClick={toggoleNav}
             className={`rotate-45 flex justify-end h-9 float-end w-9 transform origin-center transition duration-150 ease-out ${

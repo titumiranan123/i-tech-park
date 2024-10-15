@@ -214,6 +214,15 @@ section.bg-gray {
     pointer-events: none;  /* Prevent clicks */
 }
 
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.animate-spin {
+    animation: spin 3s linear infinite;
+}
+
 @media (max-width: 640px) {
   .slider {
     padding-top: 1rem;

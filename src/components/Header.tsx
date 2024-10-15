@@ -95,12 +95,12 @@ const Header: React.FC = () => {
                   damping: 15,
                   delay: 0.5,
                 }}
-                className="flex flex-wrap md:justify-normal justify-center gap-2 lg:mt-[59px] mt-[59px] md:mt-[49px]"
+                className="flex  md:justify-normal justify-center gap-2 lg:mt-[59px] mt-[59px] md:mt-[49px]"
               >
                 <Link
                   to={"https://calendly.com/imonofficial2/30min?month=2024-07"}
                   target="_blank"
-                  className="py-3 px-6 w-[180px] md:w-[230px]  bg-black rounded-[40px] flex justify-center items-center opensans font-[600] md:text-[20px] md:leading-[27.24px] text-white shadow text-[12px] gap-2 z-20"
+                  className="py-3 px-6 w-[150px] md:w-[230px]  bg-black rounded-[40px] flex justify-center items-center opensans font-[600] md:text-[20px] md:leading-[27.24px] text-white shadow text-[12px] gap-2 z-20"
                 >
                   Book a Call
                   <img
@@ -112,7 +112,7 @@ const Header: React.FC = () => {
                 <Link
                   to={"https://montagemotion.com/work/video-editing"}
                   target="_blank"
-                  className="py-4 px-6 border rounded-[40px] md:w-[230px] w-[180px] flex justify-center border-[#000030] items-center opensans font-[400] text-[12px] text-[#000030] md:text-[20px] z-20"
+                  className="py-4 px-6 border rounded-[40px] md:w-[230px] w-[150px] flex justify-center border-[#000030] items-center opensans font-[400] text-[12px] text-[#000030] md:text-[20px] z-20"
                 >
                   See Our Works
                 </Link>
