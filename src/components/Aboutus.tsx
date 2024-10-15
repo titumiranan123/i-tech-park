@@ -49,7 +49,7 @@ const Aboutus: React.FC = () => {
         data-aos="fade-right" // AOS for smooth scrolling animation
       >
         <motion.img
-          className="lg:w-[543px] lg:h-[627px] w-full h-auto rounded-[28px]"
+          className="lg:w-[543px] lg:h-[627px] md:w-full w-full h-auto rounded-[28px]"
           src={about}
           alt="about"
           initial={{ opacity: 0, scale: 0.9 }}

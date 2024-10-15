@@ -13,16 +13,17 @@ const Nestedmember: React.FC<{ data: any }> = ({ data }) => {
       fadeEffect={{ crossFade: true }}
       navigation
       modules={[Navigation, EffectFade]}
+      className="teamswiperchild"
     >
       {data.map((slide: any, idx: number) => (
         <SwiperSlide key={idx}>
           <div className="p-3 lg:p-14 flex flex-col md:flex-row gap-5 justify-start items-center">
             <img
               src={slide.image}
-              className="w-full lg:w-[305px] lg:h-[333px] rounded-lg object-cover"
+              className="w-full md:h-[333px] md:w-[305px] lg:w-[305px] lg:h-[333px] rounded-lg object-cover"
               alt={slide.title}
             />
-            <div className="bg-black p-4 lg:p-6 rounded-lg flex-1">
+            <div className=" rounded-lg flex justify-center items-center flex-col ">
               {" "}
               {/* Updated styles */}
               <h1 className="text-[24px] lg:text-[36px] text-white font-bold lg:leading-[43.2px] ">

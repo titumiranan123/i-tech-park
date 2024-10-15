@@ -234,11 +234,15 @@ section.bg-gray {
     border-radius: 50%;
 }
 .teamswiper{
-  height: 620px;
+    height: 580px !important;
 }
+.teamswiperchild{
+  height: 580px !important;
+}
+
  .teamswiper .swiper-horizontal .swiper-button-prev{
-   left:  283px !important;
-    right: auto;
+   left:  auto !important;
+    right: 0px;
     rotate: 90deg;
     top: 38% !important;
     background-color: #000000;
@@ -256,6 +260,22 @@ section.bg-gray {
     right: 3px !important;
     rotate: 90deg;
     top: 38% !important;
+    background-color: #000000;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+.teamswiper{
+  height: 355px;
+}
+.teamswiperchild{
+   height: 355px;
+}
+ .teamswiper .swiper-horizontal .swiper-button-prev{
+   left:  auto !important;
+    right: 0px;
+    rotate: 90deg;
+    top: 35% !important;
     background-color: #000000;
     width: 40px !important;
     height: 40px !important;

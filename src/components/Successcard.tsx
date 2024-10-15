@@ -7,7 +7,7 @@ interface cardProp{
 }
 const Successcard:React.FC<cardProp> = ({img,name,designation,description}) => {
     return (
-      <div className="border border-[#F04B23] rounded-[24px] px-[26px] pt-[26px] pb-[44px]  md:w-[373px] w-full h-[490px] ">
+      <div className="border border-[#F04B23] rounded-[24px] px-[26px] pt-[26px] pb-[44px] md:w-[350px] md:gap-10  lg:w-[373px] w-full h-[490px] ">
         <div className='flex gap-2 items-center'>
           <img className='w-[80px] h-[80px] rounded-full' src={img} alt="" />
           <div>

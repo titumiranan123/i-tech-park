@@ -256,7 +256,7 @@ const Teammember: React.FC = () => {
         </div>
 
         {/* Main Slider */}
-        <div className="w-full  lg:w-[827px] lg:h-[453px] rounded-xl overflow-hidden  h-[620px] ">
+        <div className="w-full  lg:w-[827px] lg:h-[453px] rounded-xl overflow-hidden  h-[580px] md:h-[360px] ">
           <Swiper
             direction="vertical"
             spaceBetween={30}
@@ -265,7 +265,7 @@ const Teammember: React.FC = () => {
             modules={[Navigation, Mousewheel]}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-            className="w-full teamswiper lg:h-[453px] h-[620px]"
+            className="teamswiper"
           >
             {slides.map((slide, index) => (
               <SwiperSlide key={index}>

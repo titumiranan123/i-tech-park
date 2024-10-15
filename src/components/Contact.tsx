@@ -110,7 +110,7 @@ const Contactsection: React.FC = () => {
         </div>
         {/* Form Section */}
         <div
-          className="w-full lg:w-[422px] md:mt-0 -mt-26 border bg-white rounded-xl p-6 lg:p-8 h-auto"
+          className="w-full lg:w-[422px] md:mt-0 -mt-[35px] border bg-white rounded-xl p-6 lg:p-8 h-auto"
           data-aos="fade-left" // Apply AOS fade-left animation
         >
           <form
