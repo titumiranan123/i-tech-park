@@ -72,7 +72,7 @@ const Contactsection: React.FC = () => {
   };
 
   return (
-    <div className="relative lg:h-[752px] h-auto max-w-[1240px] mx-auto lg:mt-[120px] mt-[80px] px-4">
+    <div className="relative lg:h-[752px] h-auto max-w-[1240px] mx-auto lg:mt-[120px] mt-[80px] px-4  lg:-mb-[120px]">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:gap-36 gap-8 lg:pt-[81px]">
         {/* Contact Content */}
         <div

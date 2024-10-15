@@ -72,8 +72,8 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="relative lg:h-[752px] h-auto max-w-[1440px] mx-auto lg:mt-[0px] mt-[80px] px-4 lg:mb-[120px] mb-[80px]">
-      <div className="flex flex-col lg:flex-row justify-between items-center lg:gap-36 gap-8 lg:pt-[81px]">
+    <div className="relative contact lg:h-[752px] -mb-[120px] h-auto  mx-auto lg:mt-[0px] mt-[80px] px-4 ">
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:gap-36 gap-8 lg:pt-[81px] max-w-[1240px] mx-auto">
         {/* Contact Content */}
         <div
           className="contact-content lg:w-[400px]"
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
         <div
-          className="lg:absolute lg:-bottom-[120px] left-[30%] transform -translate-x-1/2"
+          className="lg:absolute lg:-bottom-[0px] left-[35%] transform -translate-x-1/2"
           data-aos="fade-up" // Apply AOS fade-up animation
         >
           <img
@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
         </div>
         {/* Form Section */}
         <div
-          className="w-full lg:w-[422px] md:mt-0 lg:mt-40 -mt-16 border bg-white rounded-xl p-6 lg:p-8 h-auto"
+          className="w-full lg:w-[422px] md:mt-0 lg:mt-10 -mt-16 border bg-white rounded-xl p-6 lg:p-8 h-auto"
           data-aos="fade-left" // Apply AOS fade-left animation
         >
           <form

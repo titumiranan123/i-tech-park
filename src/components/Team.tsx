@@ -256,7 +256,7 @@ const Teammember: React.FC = () => {
         </div>
 
         {/* Main Slider */}
-        <div className="w-full  lg:w-[827px] lg:h-[453px] rounded-xl overflow-hidden  h-[580px] md:h-[360px] ">
+        <div className="w-full   lg:w-[827px] h-[580px] md:h-[360px] lg:h-[453px] rounded-xl overflow-hidden   ">
           <Swiper
             direction="vertical"
             spaceBetween={30}
@@ -265,7 +265,7 @@ const Teammember: React.FC = () => {
             modules={[Navigation, Mousewheel]}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-            className="teamswiper"
+            className="teamswiper lg:h-[453px]"
           >
             {slides.map((slide, index) => (
               <SwiperSlide key={index}>
@@ -274,7 +274,7 @@ const Teammember: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }} // On animation state
                   exit={{ opacity: 0, x: -50 }} // On exit state
                   transition={{ duration: 0.5 }} // Duration of animation
-                  className=" bg-[#F04B23] w-full h-full "
+                  className="  w-full h-full "
                 >
                   <Nestedmember data={slide.slides} />
                 </motion.div>

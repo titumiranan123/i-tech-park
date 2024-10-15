@@ -17,22 +17,26 @@ const Nestedmember: React.FC<{ data: any }> = ({ data }) => {
     >
       {data.map((slide: any, idx: number) => (
         <SwiperSlide key={idx}>
-          <div className="p-3 lg:p-14 flex flex-col md:flex-row gap-5 justify-start items-center">
+          <div
+            className={`p-3 lg:p-14 flex flex-col md:flex-row gap-5 lg:justify-start lg:items-center bg-[#F04B23] h-[580px] md:h-[360px] lg:h-[453px] ${
+              slide.content === "" && "h-[500px] rounded-xl"
+            }`}
+          >
             <img
               src={slide.image}
               className="w-full md:h-[333px] md:w-[305px] lg:w-[305px] lg:h-[333px] rounded-lg object-cover"
               alt={slide.title}
             />
-            <div className=" rounded-lg flex justify-center items-center flex-col ">
+            <div className="flex justify-start items-start  flex-col ">
               {" "}
-              {/* Updated styles */}
-              <h1 className="text-[24px] lg:text-[36px] text-white font-bold lg:leading-[43.2px] ">
+         
+              <h1 className="text-[24px] lg:text-[36px] text-white  bold lg:leading-[43.2px] ">
                 {slide.name}
               </h1>
-              <p className="text-white text-[22px] font-semibold ">
+              <p className="text-white md:text-[22px] semibold md:leading-[26px] text-[18px] leading-[22.2px]  text-left">
                 {slide.designation}
               </p>
-              <p className="text-sm lg:text-base mt-3 lg:mt-4 text-white">
+              <p className="text-sm regular lg:text-base mt-3 lg:mt-4 text-white">
                 {slide.content}
               </p>
             </div>
