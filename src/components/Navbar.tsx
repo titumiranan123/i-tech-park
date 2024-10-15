@@ -12,12 +12,11 @@ const Navbar = () => {
   const router = useLocation();
   const CustomLink = ({ href, className, title }:any) => {
     const isActive = router.pathname === href;
-
     return (
       <Link
-        className={` flex openSans   text-[20px] font-[400]   my-auto justify-center items-center  h-[33px] max-w-48  px-4 py-2  ${className} ${
+        className={` flex semibold  text-[20px] leading-[32px] font-[600]   my-auto justify-center items-center  h-[33px] max-w-48  px-4 py-2  ${className} ${
           isActive
-            ? "  rounded-[30px]   semibold   bg-[#000000]  flex justify-center items-center   text-white  "
+            ? "  rounded-[30px]      bg-[#000000]  flex justify-center items-center   text-white  "
             : "text-black regular"
         } `}
         to={href}
@@ -30,7 +29,7 @@ const Navbar = () => {
   
 
   return (
-    <div className={`relative  lg:px-0 px-4  openSans  md:py-1 lg:py-0`}>
+    <div className={`relative  lg:px-0 px-4    md:py-1 lg:py-0`}>
       <nav className="flex justify-between max-w-[1240px] md:h-[120px] h-[100px] mx-auto items-center">
         <a href="/" className="logo ">
           <img src={logo} alt="" />

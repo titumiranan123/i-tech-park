@@ -24,7 +24,7 @@ const Header: React.FC = () => {
   useEffect(() => {
     // Initialize AOS (Animate on Scroll)
     AOS.init({
-      duration: 1200, // Animation duration
+      duration: 1240, // Animation duration
       easing: "ease-in-out", // Easing for scroll animations
       once: true, // Whether animation should happen only once
     });
@@ -54,17 +54,17 @@ const Header: React.FC = () => {
       className="relative"
     >
       <div className="lg:px-0 px-4 flex justify-center items-center flex-col z-20">
-        <div className="relative mt-[60px] md:mt-[154px] mx-auto max-w-[1240px]">
+        <div className="relative  mt-[60px] md:mt-[154px] mx-auto max-w-[1240px]">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
-            className="flex justify-between lg:flex-nowrap flex-wrap gap-5  relative z-20 lg:px-4 px-0"
+            className="flex justify-between lg:flex-nowrap flex-wrap gap-5  relative z-20 "
           >
             <div className="lg:w-1/2">
               <h1
                 data-aos="fade-up"
-                className="text-black  lg:text-[56px] md:text-[56px] text-[34px] leading-[35px] flex items-center lg:leading-[67px] bold md:leading-[64px] md:text-left"
+                className="text-black bold  lg:text-[64px]  lg:leading-[76.8px] md:text-[56px] text-[34px] leading-[35px] flex items-center  md:leading-[64px] md:text-left"
               >
                 Result Driven <br />
                 Digital Agency
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
               <p
                 data-aos="fade-up"
                 data-aos-delay="200"
-                className="regular text-[14px] leading-[16px] md:text-[18px] lg:text-[20px] text-[#080808] md:leading-[25.6px] "
+                className="regular text-[14px] leading-[16px] md:text-[18px] lg:text-[20px] text-[#000030] md:leading-[25.6px] regular"
               >
                 I-Tech Park BD serves as your Digital Marketing Partner in all
                 ways possible. From Social Media Marketing, WordPress
@@ -100,15 +100,19 @@ const Header: React.FC = () => {
                 <Link
                   to={"https://calendly.com/imonofficial2/30min?month=2024-07"}
                   target="_blank"
-                  className="py-3 px-6 w-[180px] md:w-[230px]  bg-black rounded-[40px] flex justify-center items-center opensans font-[400] md:text-[20px] text-white shadow text-[12px] gap-2 z-20"
+                  className="py-3 px-6 w-[180px] md:w-[230px]  bg-black rounded-[40px] flex justify-center items-center opensans font-[600] md:text-[20px] md:leading-[27.24px] text-white shadow text-[12px] gap-2 z-20"
                 >
                   Book a Call
-                  <img className="md:w-8 md:h-8 w-6 h-6" src={arrow} alt="" />
+                  <img
+                    className="md:w-[36px] md:h-[36px] w-6 h-6"
+                    src={arrow}
+                    alt=""
+                  />
                 </Link>
                 <Link
                   to={"https://montagemotion.com/work/video-editing"}
                   target="_blank"
-                  className="py-4 px-6 border rounded-[40px] md:w-[230px] w-[180px] flex justify-center border-[#000030] items-center opensans font-[400] text-[12px] text-black md:text-[20px]"
+                  className="py-4 px-6 border rounded-[40px] md:w-[230px] w-[180px] flex justify-center border-[#000030] items-center opensans font-[400] text-[12px] text-[#000030] md:text-[20px] z-20"
                 >
                   See Our Works
                 </Link>
@@ -121,7 +125,7 @@ const Header: React.FC = () => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="rounded-[28px] overflow-hidden lg:scale-100 scale-95  bg-white lg:w-[1200px] lg:h-[679px] md:w-[720px]  md:h-[405px] w-[320px] h-[180px] mx-auto relative"
+            className="rounded-[28px] overflow-hidden lg:scale-100 scale-95  bg-white lg:w-[1240px] lg:h-[698px] md:w-[720px]  md:h-[405px] w-[320px] h-[180px] mx-auto relative"
           >
             {isImageVisible && (
               <div
@@ -130,7 +134,7 @@ const Header: React.FC = () => {
               >
                 <img
                   src={img}
-                  className="lg:w-[1200px] lg:h-[679px] md:w-[720px]  md:h-[405px]"
+                  className="lg:w-[1240px] lg:h-[698px] md:w-[720px]  md:h-[405px]"
                   alt="Displayed"
                 />
                 <div
@@ -151,7 +155,7 @@ const Header: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className="lg:w-[1200px] lg:h-[679px] md:w-[720px] md:h-[405px] w-[320px] h-[180px] flex justify-center items-center mx-auto"
+                className="lg:w-[1240px] lg:h-[698px] md:w-[720px] md:h-[405px] w-[320px] h-[180px] flex justify-center items-center mx-auto"
               >
                 <ReactPlayer
                   url={"https://www.youtube.com/watch?v=4HQs-yyCrrk"}
