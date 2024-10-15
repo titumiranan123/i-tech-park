@@ -227,7 +227,7 @@ const Teammember: React.FC = () => {
         title="Our Team"
         subtitle="Our team is a dynamic blend of creativity, expertise and dedication, who are passionate about driving your success."
       />
-      <div className="flex flex-col mt-[30px] justify-between lg:flex-row max-w-[1240px] items-center lg:gap-2 mx-auto  lg:px-0 px-4 gap-16 md:gap-10">
+      <div className="flex flex-col mt-[60px] justify-between lg:flex-row max-w-[1240px] items-center lg:gap-2 mx-auto  lg:px-0 px-4 gap-16 md:gap-10">
         {/* Left-side Text Navigation */}
 
         <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] flex flex-col justify-center lg:space-y-4 md:space-y-3 space-y-1 mt-[24px]">

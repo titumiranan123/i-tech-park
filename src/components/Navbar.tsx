@@ -129,21 +129,21 @@ const Navbar = () => {
             <div onClick={toggoleNav}>
               <CustomLink
                 href={"/"}
-                className={" font-bold w-20"}
+                className={" font-bold w-[130px]"}
                 title={"Home"}
               />
             </div>
             <div onClick={toggoleNav}>
               <CustomLink
                 href={"/services"}
-                className={"font-bold w-20 text-[16px]"}
+                className={"font-bold w-[130px] text-[16px]"}
                 title={"Services"}
               />{" "}
             </div>{" "}
             <div onClick={toggoleNav}>
               <CustomLink
                 href={"/reviews"}
-                className={"font-bold w-20 text-[16px]"}
+                className={"font-bold w-[130px] text-[16px]"}
                 title={"Reviews"}
               />{" "}
             </div>{" "}
@@ -157,8 +157,9 @@ const Navbar = () => {
             <div onClick={toggoleNav}>
               <CustomLink
                 href={"/contact"}
-                className={"font-bold w-20 text-[16px]"}
+                className={"font-bold w-[130px] text-[16px]"}
                 title={"Contact"}
+              
               />{" "}
             </div>
           </div>
