@@ -213,7 +213,7 @@ const TextNavigationSlider: React.FC = () => {
       </div>
 
       {/* Main Slider */}
-      <div className="w-full  lg:w-[743px] lg:h-[730px] rounded-xl overflow-hidden  ">
+      <div className="w-full  lg:w-[743px] lg:h-[730px]  overflow-hidden  ">
         <Swiper
           direction="vertical"
           spaceBetween={30}
@@ -232,7 +232,7 @@ const TextNavigationSlider: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }} // On animation state
                 exit={{ opacity: 0, x: -50 }} // On exit state
                 transition={{ duration: 0.5 }} // Duration of animation
-                className=" bg-[#F04B23] lg:h-[730px] "
+                className=" bg-[#F04B23] lg:h-[730px] rounded-[20px] "
               >
                 <Nested data={slide.slides} />
               </motion.div>

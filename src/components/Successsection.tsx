@@ -35,7 +35,7 @@ const Successsection: React.FC = () => {
       <motion.div variants={itemVariants}>
         <Heading
           title="Our Success Story"
-          subtitle="We priotize your success with customized strategies , delivering outstanding results"
+          subtitle="We priotize your success with customized strategies , delivering outstanding results."
         />
       </motion.div>
 

@@ -100,7 +100,8 @@ const BlogModal: React.FC<{ blog: Blog; onClose: () => void }> = ({
   onClose,
 }) => (
   <div className="fixed inset-0  bg-[#000030] bg-opacity-75 flex items-center justify-center  z-50 transition-opacity">
-    <div className="bg-[#000030] rounded-lg shadow-lg max-w-3xl w-full p-10 transform transition-transform">
+    <div className="bg-[#000030] rounded-lg shadow-lg max-w-3xl lg:h-[700px] overflow-y-scroll w-full p-10 transform transition-transform">
+      <img src={blog.image} alt="" />
       <h2 className="text-3xl semibold mb-[4px] mt-[32px] text-white">{blog.title}</h2>
       <p className="text-sm regular lg:text-[18px] leading-[30px] mt-3 lg:mt-4 text-white">
         {blog.content}

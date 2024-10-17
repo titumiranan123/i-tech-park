@@ -18,7 +18,7 @@ const Heading: React.FC<headingProp> = ({ title, subtitle }) => {
       <p
         className="font-[400] text-[16px] leading-[24px] text-black regular
         md:text-[18px] md:leading-[26px] 
-        lg:text-[20px] lg:leading-[30px]"
+        lg:text-[20px] lg:leading-[30px] lg:w-[778px] text-left "
       >
         {subtitle}
       </p>
