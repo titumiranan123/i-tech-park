@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Mousewheel } from "swiper/modules";
 import { motion } from "framer-motion"; // Import Framer Motion
@@ -213,7 +213,47 @@ const Teammember: React.FC = () => {
      ],
    },
  ];
-  
+   useEffect(() => {
+     const animateElement = (
+       selector: string,
+       animationClass: string
+     ): (() => void) | undefined => {
+       const element = document.querySelector(selector);
+
+       const observer = new IntersectionObserver((entries) => {
+         entries.forEach((entry) => {
+           if (entry.isIntersecting) {
+             entry.target.classList.add(animationClass);
+           }
+         });
+       });
+
+       if (element) {
+         observer.observe(element);
+       }
+
+       return () => {
+         if (element) {
+           observer.unobserve(element);
+         }
+       };
+     };
+
+     // Observe both buttons
+     const unobservePrev = animateElement(
+       ".teamswiper .swiper-button-prev",
+       "bounceInLeft"
+     );
+     const unobserveNext = animateElement(
+       ".teamswiper .swiper-button-next",
+       "bounceInRight"
+     );
+
+     return () => {
+       if (unobservePrev) unobservePrev();
+       if (unobserveNext) unobserveNext();
+     };
+   }, []);
 
   const handleTextNavigationClick = (index: number) => {
     if (swiperRef.current) {

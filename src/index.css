@@ -16,6 +16,7 @@
 }
 
 
+
 * {
   margin: 0;
   padding: 0;
@@ -149,7 +150,7 @@ section.bg-gray {
    left:  auto !important;
     right: 3px;
     rotate: 90deg;
-    top: 38% !important;
+    top: 35% !important;
     background-color: #000000;
     width: 40px !important;
     height: 40px !important;
@@ -257,4 +258,6 @@ section.bg-gray {
     border-radius: 50%;
 }
 }
+
+
 
