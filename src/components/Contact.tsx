@@ -72,7 +72,7 @@ const Contactsection: React.FC = () => {
   };
 
   return (
-    <div className="relative lg:h-[752px] h-auto max-w-[1240px] mx-auto lg:mt-[120px] mt-[80px] px-4  lg:-mb-[120px]">
+    <div className="relative lg:h-[752px] h-auto max-w-[1240px] mx-auto lg:mt-[120px] mt-[80px] px-4  lg:-mb-[70px]">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:gap-36 gap-8 lg:pt-[81px]">
         {/* Contact Content */}
         <div
@@ -99,7 +99,7 @@ const Contactsection: React.FC = () => {
           </div>
         </div>
         <div
-          className="lg:absolute bottom-0 left-[30%] transform -translate-x-1/2"
+          className="lg:absolute -bottom-14 -z-10 left-[30%] transform -translate-x-1/2"
           data-aos="fade-up" // Apply AOS fade-up animation
         >
           <img
@@ -113,6 +113,14 @@ const Contactsection: React.FC = () => {
           className="w-full lg:w-[422px] md:mt-0 -mt-[35px] border bg-white rounded-xl p-6 lg:p-8 h-auto"
           data-aos="fade-left" // Apply AOS fade-left animation
         >
+          <div className="flex flex-col  justify-center items-center gap-[5px] mb-[18px] mt-[10px]">
+            <h3 className="text-[#000030]  bold md:text-[24px] text-[20px] leading-[24.5px]   md:leading-[28.8px]">
+              Get in Touch
+            </h3>
+            <p className="md:text-[20px] regular md:leading-[30px] text-[#000030] text-[16px] leading-[20.5px] ">
+              Have ideas to share ? reach out !
+            </p>
+          </div>
           <form
             onSubmit={(e) => handalSubmit(e)}
             className="flex flex-col gap-4"

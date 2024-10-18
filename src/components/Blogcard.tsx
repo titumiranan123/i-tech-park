@@ -19,7 +19,7 @@ const Blogcard: React.FC<BlogCardProps> = ({ blog, onClick }) => {
       {/* Blog Image */}
       <img
         src={blog.image}
-        className="w-full md:h-[320px] md:w-[537px] ] rounded-lg object-cover"
+        className="w-full h-auto md:h-[320px] md:w-[537px] ] rounded-lg object-cover"
         alt={blog.title}
       />
 

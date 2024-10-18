@@ -225,21 +225,24 @@ const Teammember: React.FC = () => {
     <div className="max-w-[1240px] mx-auto mt-[60px] lg:mt-[120px]">
       <Heading
         title="Our Team"
-        subtitle="Our team is a dynamic blend of creativity, expertise and dedication, who are passionate about driving your success."
+        subtitle="Our team is a dynamic blend of creativity, expertise, and dedication, who are passionate about driving your success."
+        data-aos="fade-up" // AOS animation
       />
-      <div className="flex flex-col mt-[60px] justify-between lg:flex-row max-w-[1240px] items-center lg:gap-2 mx-auto  lg:px-0 px-4 gap-16 md:gap-10">
+      <div className="flex flex-col mt-[60px] justify-between lg:flex-row max-w-[1240px] items-center lg:gap-2 mx-auto lg:px-0 px-4 gap-16 md:gap-10">
         {/* Left-side Text Navigation */}
-
-        <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] flex flex-col justify-center lg:space-y-4 md:space-y-3 space-y-1 mt-[24px]">
+        <div
+          className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] flex flex-col justify-center lg:space-y-4 md:space-y-3 space-y-1 mt-[24px]"
+          data-aos="fade-right"
+        >
           {slides.map((slide, index) => (
             <motion.button
               key={index}
               onClick={() => handleTextNavigationClick(index)}
               whileHover={{ scale: 1.05 }} // Hover effect
               whileTap={{ scale: 0.95 }} // Tap effect
-              className={`text-lg flex items-center text-left transition-all duration-300   text-black ${
+              className={`text-lg flex items-center text-left transition-all duration-300 text-black ${
                 index === activeIndex
-                  ? "ms-1 text-[24px] md:text-[28px] md:leading-[32px]  lg:text-[32px] lg:leading-[38.4px] bold"
+                  ? "ms-1 text-[24px] md:text-[28px] md:leading-[32px] lg:text-[32px] lg:leading-[38.4px] bold"
                   : "regular text-[20px] leading-[24px] lg:text-[30px] md:text-[26px] md:leading-[28px]"
               } `}
             >
@@ -256,7 +259,10 @@ const Teammember: React.FC = () => {
         </div>
 
         {/* Main Slider */}
-        <div className="w-full   lg:w-[827px] h-[580px] md:h-[360px] lg:h-[453px] rounded-xl overflow-hidden   ">
+        <div
+          className="w-full lg:w-[827px] h-[580px] md:h-[360px] lg:h-[453px] rounded-xl overflow-hidden"
+          data-aos="fade-left"
+        >
           <Swiper
             direction="vertical"
             spaceBetween={30}
@@ -274,7 +280,7 @@ const Teammember: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }} // On animation state
                   exit={{ opacity: 0, x: -50 }} // On exit state
                   transition={{ duration: 0.5 }} // Duration of animation
-                  className="  w-full h-full "
+                  className="w-full h-full"
                 >
                   <Nestedmember data={slide.slides} />
                 </motion.div>

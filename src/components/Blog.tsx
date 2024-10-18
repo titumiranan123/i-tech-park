@@ -99,11 +99,17 @@ const BlogModal: React.FC<{ blog: Blog; onClose: () => void }> = ({
   blog,
   onClose,
 }) => (
-  <div className="fixed inset-0  bg-[#000030] bg-opacity-75 flex items-center justify-center  z-50 transition-opacity">
-    <div className="bg-[#000030] rounded-lg shadow-lg max-w-3xl lg:h-[700px] overflow-y-scroll w-full p-10 transform transition-transform">
-      <img src={blog.image} alt="" />
-      <h2 className="text-3xl semibold mb-[4px] mt-[32px] text-white">{blog.title}</h2>
-      <p className="text-sm regular lg:text-[18px] leading-[30px] mt-3 lg:mt-4 text-white">
+  <div className="fixed inset-0  bg-[#000030] bg-opacity-75 flex items-center justify-center backdrop-blur-xl  z-50 transition-opacity">
+    <div className="bg-[#000030] rounded-[20px] shadow-lg lg:max-w-3xl lg:h-[700px] md:max-w-[700px] overflow-y-scroll w-[90%] md:h-auto h-[400px] md:p-10 p-3 transform transition-transform">
+      <img
+        className="w-full md:h-[320px] md:w-[537px] ] rounded-lg object-cover"
+        src={blog.image}
+        alt=""
+      />
+      <h2 className="md:text-[30px] md:leading-[33px] text-[24px] leading-[28.8px]  semibold mb-[4px] mt-[32px] text-white">
+        {blog.title}
+      </h2>
+      <p className="text-[16px] leading-[20.8px] regular md:text-[18px] md:leading-[30px] mt-3 lg:mt-4 text-white">
         {blog.content}
       </p>
       <div className="text-right mt-[38px] md:mt-[68px] ">
