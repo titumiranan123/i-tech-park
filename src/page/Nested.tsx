@@ -15,6 +15,7 @@ const Nested: React.FC<{ data: any;}> = ({
       fadeEffect={{ crossFade: true }}
       navigation
       modules={[Navigation, EffectFade]}
+      className="serviceImg"
     >
       {data.map((s: any, idx: number) => (
         <SwiperSlide key={idx}>

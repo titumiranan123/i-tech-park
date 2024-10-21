@@ -189,6 +189,9 @@ section.bg-gray {
 .animate-spin {
     animation: spin 3s linear infinite;
 }
+.serviceImg{
+  height: 410px !important;
+}
 
 @media (max-width: 640px) {
   .slider {
@@ -237,13 +240,21 @@ section.bg-gray {
 }
 @media (min-width: 641px) and (max-width: 820px) {
   .swiper {
-    height: 650px;
+    height: 750px;
   }
   .swiper-button-prev{
+     left:  auto !important;
+    right: 53px !important;
+    top: 3% !important;
+    background-color: #000000;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+  .swiper-button-next{
     left:  auto !important;
     right: 3px !important;
-    rotate: 90deg;
-    top: 38% !important;
+    top: 3% !important;
     background-color: #000000;
     width: 40px !important;
     height: 40px !important;

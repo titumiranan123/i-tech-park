@@ -234,7 +234,7 @@ const TextNavigationSlider: React.FC = () => {
           modules={[Navigation, Mousewheel]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-          className="w-full lg:h-[730px] "
+          className="w-full lg:h-[780px] "
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
@@ -243,9 +243,9 @@ const TextNavigationSlider: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }} // On animation state
                 exit={{ opacity: 0, x: -50 }} // On exit state
                 transition={{ duration: 0.5 }} // Duration of animation
-                className=" bg-[#F04B23] lg:h-[730px] rounded-[20px] "
+                className=" bg-[#F04B23]  rounded-[20px] "
               >
-                <div className="lg:p-[56px] md:p-14 p-3 lg:w-[733px] lg:h-[730px] h-[460px]">
+                <div className="lg:p-[56px] md:p-14 p-3 ">
                   <h1 className="bold lg:text-[48px] md:text-[36px] text-[26px] lg:leading-[57.6px] leading-[40px] text-white">
                     {slide.title}
                   </h1>
