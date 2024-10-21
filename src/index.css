@@ -158,19 +158,19 @@ section.bg-gray {
 }
 
 .swiper-button-prev{
-    left:  auto !important;
-    right: 3px !important;
-    rotate: 90deg;
-    top: 40% !important;
+    left:  5px !important;
+    right: auto !important;
+
+    top: 50% !important;
     background-color: #000000;
     width: 40px !important;
     height: 40px !important;
     border-radius: 50%;
 }
 .swiper-button-next{
-    right: 3px !important;
-    rotate: 90deg;
-    top: 48% !important;
+    left: auto !important;
+    right: 5px;
+    top: 50% !important;
     width: 40px !important;
     height: 40px !important;
     background-color: #000000;

@@ -24,12 +24,16 @@ import video1 from "./../assets/service/video1.png";
 import virtual1 from "./../assets/service/virtual1.png";
 import business1 from "./../assets/service/business.png";
 import Nested from "../page/Nested";
+interface ImageItem {
+  image: string; // Adjust this based on the actual image type (e.g., string for URLs or module imports)
+}
 
+// Define the Slide interface with the section, title, content, and images array
 interface Slide {
-  section: string; // Add section to identify the section each slide belongs to
+  section: string;
   title: string;
   content: string;
-  image: string;
+  images: ImageItem[]; // Array of ImageItem objects
 }
 
 const TextNavigationSlider: React.FC = () => {
@@ -51,28 +55,38 @@ const TextNavigationSlider: React.FC = () => {
       title: "Graphic Design",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: design1,
+      images: [
+        {
+          image: design1,
+        },
+        {
+          image: design2,
+        },
+        {
+          image: web2,
+        },
+      ],
     },
     {
       section: "Design",
       title: "Motion Poster",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: design2,
+      images: [{ image: design2 }],
     },
     {
       section: "Design",
       title: "UI/UX",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: design3,
+      images: [{ image: design3 }],
     },
     {
       section: "Design",
       title: "Logo Animation",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: design4,
+      images: [{ image: design4 }],
     },
 
     {
@@ -80,21 +94,21 @@ const TextNavigationSlider: React.FC = () => {
       title: "Custom Code",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: web1,
+      images: [{ image: web1 }],
     },
     {
       section: "Web Development",
       title: "WordPress",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: web2,
+      images: [{ image: web2 }],
     },
     {
       section: "Web Development",
       title: "Shopify",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: web3,
+      images: [{ image: web3 }],
     },
 
     {
@@ -102,7 +116,7 @@ const TextNavigationSlider: React.FC = () => {
       title: "Video Editing",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: video1,
+      images:[{ image: video1 }] ,
     },
 
     {
@@ -110,21 +124,21 @@ const TextNavigationSlider: React.FC = () => {
       title: "YouTube SEO",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: seo1,
+      images:[{ image:seo1  }] ,
     },
     {
       section: "Search Engine Marketing",
       title: "SEO",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: seo2,
+      images: [{ image:  seo2}],
     },
     {
       section: "Search Engine Marketing",
       title: "Google Ads",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: seo3,
+      images: [{ image: seo3 }],
     },
 
     {
@@ -132,21 +146,21 @@ const TextNavigationSlider: React.FC = () => {
       title: "Organic Social Media",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: social1,
+      images:[{ image:  social1}] ,
     },
     {
       section: "Social Media Marketing",
       title: "Paid Social Media",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: social2,
+      images:[{ image: social2 }] ,
     },
     {
       section: "Social Media Marketing",
       title: "Monetization",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: social3,
+      images: [{ image: social3 }],
     },
 
     {
@@ -154,7 +168,7 @@ const TextNavigationSlider: React.FC = () => {
       title: "Business Consultation",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: business1,
+      images:[{ image: business1 }] ,
     },
 
     {
@@ -162,7 +176,7 @@ const TextNavigationSlider: React.FC = () => {
       title: "Virtual Assistant",
       content:
         "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
-      image: virtual1,
+      images:[{ image:  virtual1}] ,
     },
   ];
 
@@ -231,7 +245,23 @@ const TextNavigationSlider: React.FC = () => {
                 transition={{ duration: 0.5 }} // Duration of animation
                 className=" bg-[#F04B23] lg:h-[730px] rounded-[20px] "
               >
-                <Nested data={[slide]} />
+                <div className="lg:p-[56px] md:p-14 p-3 lg:w-[733px] lg:h-[730px] h-[460px]">
+                  <h1 className="bold lg:text-[48px] md:text-[36px] text-[26px] lg:leading-[57.6px] leading-[40px] text-white">
+                    {slide.title}
+                  </h1>
+                  <p className="regular text-white text-[16px] lg:text-[20px] lg:leading-[30px] leading-[20px] mt-6 ">
+                    {slide.content}
+                  </p>
+                  {/* <img
+                    className="lg:w-[621px] mt-[46px] rounded-[20px] lg:h-[370px]"
+                    src={slide.images}
+                    alt={slide.title}
+                  /> */}
+                  
+
+           <Nested data={slide.images} /> 
+                
+                </div>
               </motion.div>
             </SwiperSlide>
           ))}
