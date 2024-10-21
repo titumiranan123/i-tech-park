@@ -252,13 +252,6 @@ const TextNavigationSlider: React.FC = () => {
                   <p className="regular text-white text-[16px] lg:text-[20px] lg:leading-[30px] leading-[20px] mt-6 ">
                     {slide.content}
                   </p>
-                  {/* <img
-                    className="lg:w-[621px] mt-[46px] rounded-[20px] lg:h-[370px]"
-                    src={slide.images}
-                    alt={slide.title}
-                  /> */}
-                  
-
            <Nested data={slide.images} /> 
                 
                 </div>

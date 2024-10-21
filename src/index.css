@@ -197,13 +197,21 @@ section.bg-gray {
     gap: 16px;
   }
   .swiper{
-    height: 450px;
+    height: 460px;
   }
   .swiper-button-prev{
+     left:  auto !important;
+    right: 53px !important;
+    top: 3% !important;
+    background-color: #000000;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+  .swiper-button-next{
     left:  auto !important;
     right: 3px !important;
-    rotate: 90deg;
-    top: 38% !important;
+    top: 3% !important;
     background-color: #000000;
     width: 40px !important;
     height: 40px !important;

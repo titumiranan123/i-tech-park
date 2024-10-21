@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Mousewheel } from "swiper/modules";
 import { motion } from "framer-motion"; // Import Framer Motion
@@ -28,236 +28,229 @@ import digi8 from "./../assets/member/digitalmarketer8.png";
 // import digi9 from "./../assets/member/digitalmarketer9.png";
 import digi10 from "./../assets/member/digitalmarketer10.png";
 
-import Nestedmember from "./Nestedmember";
+// import Nestedmember from "./Nestedmember";
 import Heading from "./Heading";
 
 interface Slide {
-  nav: string;
-  slides: Array<{
-    name: string;
-    designation: string;
-    content: string;
-    image: string;
-  }>;
+  section: string;
+  name: string;
+  designation: string;
+  content: string;
+  image: string; // Array of ImageItem objects
 }
 
 const Teammember: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<any>(null);
- const slides: Slide[] = [
-   {
-     nav: "Core Team ",
-     slides: [
-       {
-         name: "Masud Rana",
-         designation: "Founder & Chief Executive Officer.",
-         content:
-           "Our CEO is a visionary leader who drives innovation and inspires exclience , guiding our team to consistently achieve outstanding results.",
-         image: core1,
-       },
-       {
-         name: "Abu Bakar Chowdhury",
-         designation: "Co Founder & Chief Operating Officer",
-         content:
-           "",
-         image: core2,
-       },
-       {
-         name: "Masud Rana",
-         designation: "Chief technology officer",
-         content:
-           "",
-         image: core3,
-       },
-     ],
-   },
-   {
-     nav: "Design",
-     slides: [
-       {
-         name: "Abdur Rabbi",
-         designation: "Logo Designer- Team Lead",
-         content:
-           "Our CEO is a visionary leader who drives innovation and inspires exclience , guiding our team to consistently achieve outstanding results.",
-         image: design1,
-       },
-       {
-         name: "Ashadul Islam Ahad",
-         designation: "Design Team - Asst. Team Lead",
-         content:
-           "",
-         image: design2,
-       },
-       {
-         name: "Md. Abdul Motaleb",
-         designation: "Motion Graphics - Team Lead",
-         content:
-           "",
-         image: design3,
-       },
-       {
-         name: "Shakal Ahmed",
-         designation: "Design Team - Team Lead",
-         content:
-           "",
-         image: design4,
-       },
-     ],
-   },
-   {
-     nav: "Digital Marketing",
-     slides: [
-       {
-         name: "Sume Akter",
-         designation: "Marketer -team Lead",
-         content: "",
-         image: digi1,
-       },
-       {
-         name: "Anisur Rahman",
-         designation: "Instagram Linkdin Organic Marekting-Asst Team Lead",
-         content: "",
-         image: digi2,
-       },
-       {
-         name: "Dewan Miah",
-         designation: "Facebook organic marketing -Team Member",
-         content:
-           "",
-         image: digi3,
-       },
-       {
-         name: "Jaynto Kumar Roy",
-         designation: "Facebook organic marketing - Team Member",
-         content: "",
-         image: digi4,
-       },
-       {
-         name: "Md Mostafijur Rahman",
-         designation: "Lead Generation Expert",
-         content: "",
-         image: digi5,
-       },
-       {
-         name: "Nijam Uddin",
-         designation: "Instagram Organic Marketing - Team Lead",
-         content: "",
-         image: digi6,
-       },
-       {
-         name: "Rakib Islam",
-         designation: "Instagram+Twitter Organic Marketing -Asst. Team Lead",
-         content: "",
-         image: digi7,
-       },
-       {
-         name: "Shihab Uddin Fahim",
-         designation: "Social Media Paid  Marketing - Team Lead",
-         content: "",
-         image: digi8,
-       },
-       {
-         name: "Tahmid Nabil",
-         designation: "Facebook Organic Marketing - Team Lead",
-         content: "",
-         image: digi10,
-       },
-     ],
-   },
-   {
-     nav: "Video Editing",
-     slides: [
-       {
-         name: "Al Af Muntasir",
-         designation: "Video Editor - Team Leader",
-         content:
-           "",
-         image: video1,
-       },
-     ],
-   },
-   {
-     nav: "Web Development",
-     slides: [
-       {
-         name: "Sharier Nahid",
-         designation: "Wordpress Developer- Team Lead",
-         content:
-           "",
-         image: webdeveloper1,
-       },
-     ],
-   },
-   {
-     nav: "Support",
-     slides: [
-       {
-         name: "Nahin Rahman",
-         designation: "Support Team",
-         content:
-           "",
-         image: support1,
-       },
-     ],
-   },
-   {
-     nav: "SEO",
-     slides: [
-       {
-         name: "Ratul Islam Rafi",
-         designation: "SEO team - Team Member(SEO)",
-         content:
-           "",
-         image: seo1,
-       },
-     ],
-   },
- ];
-   useEffect(() => {
-     const animateElement = (
-       selector: string,
-       animationClass: string
-     ): (() => void) | undefined => {
-       const element = document.querySelector(selector);
+  const sections = [
+    "Core Team",
+    "Design",
+    "Digital Marketing",
+    "Video Editing",
+    "Web Development",
+    "Support",
+    "SEO",
+  ];
+  const slides: Slide[] = [
+    {
+      section: "Core Team",
+      name: "Masud Rana",
+      designation: "Founder & Chief Executive Officer.",
+      content:
+        "Our CEO is a visionary leader who drives innovation and inspires exclience , guiding our team to consistently achieve outstanding results.",
+      image: core1,
+    },
+    {
+      section: "Core Team",
+      name: "Abu Bakar Chowdhury",
+      designation: "Co Founder & Chief Operating Officer",
+      content: "",
+      image: core2,
+    },
+    {
+      section: "Core Team",
+      name: "Masud Rana",
+      designation: "Chief technology officer",
+      content: "",
+      image: core3,
+    },
 
-       const observer = new IntersectionObserver((entries) => {
-         entries.forEach((entry) => {
-           if (entry.isIntersecting) {
-             entry.target.classList.add(animationClass);
-           }
-         });
-       });
+    {
+      section: "Design",
+      name: "Abdur Rabbi",
+      designation: "Logo Designer- Team Lead",
+      content:
+        "Our CEO is a visionary leader who drives innovation and inspires exclience , guiding our team to consistently achieve outstanding results.",
+      image: design1,
+    },
+    {
+      section: "Design",
+      name: "Ashadul Islam Ahad",
+      designation: "Design Team - Asst. Team Lead",
+      content: "",
+      image: design2,
+    },
+    {
+      section: "Design",
+      name: "Md. Abdul Motaleb",
+      designation: "Motion Graphics - Team Lead",
+      content: "",
+      image: design3,
+    },
+    {
+      section: "Design",
+      name: "Shakal Ahmed",
+      designation: "Design Team - Team Lead",
+      content: "",
+      image: design4,
+    },
 
-       if (element) {
-         observer.observe(element);
-       }
+    {
+      section: "Digital Marketing",
+      name: "Sume Akter",
+      designation: "Marketer -team Lead",
+      content: "",
+      image: digi1,
+    },
+    {
+      section: "Digital Marketing",
+      name: "Anisur Rahman",
+      designation: "Instagram Linkdin Organic Marekting-Asst Team Lead",
+      content: "",
+      image: digi2,
+    },
+    {
+      section: "Digital Marketing",
+      name: "Dewan Miah",
+      designation: "Facebook organic marketing -Team Member",
+      content: "",
+      image: digi3,
+    },
+    {
+      section: "Digital Marketing",
+      name: "Jaynto Kumar Roy",
+      designation: "Facebook organic marketing - Team Member",
+      content: "",
+      image: digi4,
+    },
+    {
+      section: "Digital Marketing",
+      name: "Md Mostafijur Rahman",
+      designation: "Lead Generation Expert",
+      content: "",
+      image: digi5,
+    },
+    {
+      section: "Digital Marketing",
+      name: "Nijam Uddin",
+      designation: "Instagram Organic Marketing - Team Lead",
+      content: "",
+      image: digi6,
+    },
+    {
+      section: "Digital Marketing",
+      name: "Rakib Islam",
+      designation: "Instagram+Twitter Organic Marketing -Asst. Team Lead",
+      content: "",
+      image: digi7,
+    },
+    {
+      section: "Digital Marketing",
+      name: "Shihab Uddin Fahim",
+      designation: "Social Media Paid  Marketing - Team Lead",
+      content: "",
+      image: digi8,
+    },
+    {
+      section: "Digital Marketing",
+      name: "Tahmid Nabil",
+      designation: "Facebook Organic Marketing - Team Lead",
+      content: "",
+      image: digi10,
+    },
 
-       return () => {
-         if (element) {
-           observer.unobserve(element);
-         }
-       };
-     };
+    {
+      section: "Video Editing",
+      name: "Al Af Muntasir",
+      designation: "Video Editor - Team Leader",
+      content: "",
+      image: video1,
+    },
 
-     // Observe both buttons
-     const unobservePrev = animateElement(
-       ".teamswiper .swiper-button-prev",
-       "bounceInLeft"
-     );
-     const unobserveNext = animateElement(
-       ".teamswiper .swiper-button-next",
-       "bounceInRight"
-     );
+    {
+      section: "Web Development",
+      name: "Sharier Nahid",
+      designation: "Wordpress Developer- Team Lead",
+      content: "",
+      image: webdeveloper1,
+    },
 
-     return () => {
-       if (unobservePrev) unobservePrev();
-       if (unobserveNext) unobserveNext();
-     };
-   }, []);
+    {
+      section: "Support",
+      name: "Nahin Rahman",
+      designation: "Support Team",
+      content: "",
+      image: support1,
+    },
 
-  const handleTextNavigationClick = (index: number) => {
-    if (swiperRef.current) {
-      swiperRef.current.slideTo(index);
+    {
+      section: "SEO",
+      name: "Ratul Islam Rafi",
+      designation: "SEO team - Team Member(SEO)",
+      content: "",
+      image: seo1,
+    },
+  ];
+  // useEffect(() => {
+  //   const animateElement = (
+  //     selector: string,
+  //     animationClass: string
+  //   ): (() => void) | undefined => {
+  //     const element = document.querySelector(selector);
+
+  //     const observer = new IntersectionObserver((entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           entry.target.classList.add(animationClass);
+  //         }
+  //       });
+  //     });
+
+  //     if (element) {
+  //       observer.observe(element);
+  //     }
+
+  //     return () => {
+  //       if (element) {
+  //         observer.unobserve(element);
+  //       }
+  //     };
+  //   };
+
+  //   // Observe both buttons
+  //   const unobservePrev = animateElement(
+  //     ".teamswiper .swiper-button-prev",
+  //     "bounceInLeft"
+  //   );
+  //   const unobserveNext = animateElement(
+  //     ".teamswiper .swiper-button-next",
+  //     "bounceInRight"
+  //   );
+
+  //   return () => {
+  //     if (unobservePrev) unobservePrev();
+  //     if (unobserveNext) unobserveNext();
+  //   };
+  // }, []);
+
+  // Function to handle text-based navigation clicks
+  const handleTextNavigationClick = (sectionIndex: number) => {
+    // Get the index of the first slide of that section
+    const sectionFirstIndex = slides.findIndex(
+      (slide) => slide.section === sections[sectionIndex]
+    );
+    if (sectionFirstIndex !== -1 && swiperRef.current) {
+      swiperRef.current.slideTo(sectionFirstIndex);
     }
   };
 
@@ -270,37 +263,35 @@ const Teammember: React.FC = () => {
       />
       <div className="flex flex-col mt-[60px] justify-between lg:flex-row max-w-[1240px] items-center lg:gap-2 mx-auto lg:px-0 px-4 gap-16 md:gap-10">
         {/* Left-side Text Navigation */}
-        <div
-          className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] flex flex-col justify-center lg:space-y-4 md:space-y-3 space-y-1 mt-[24px]"
-          data-aos="fade-right"
-        >
-          {slides.map((slide, index) => (
-            <motion.button
-              key={index}
-              onClick={() => handleTextNavigationClick(index)}
-              whileHover={{ scale: 1.05 }} // Hover effect
-              whileTap={{ scale: 0.95 }} // Tap effect
-              className={`text-lg flex items-center text-left transition-all duration-300 text-black ${
-                index === activeIndex
-                  ? "ms-1 text-[24px] md:text-[28px] md:leading-[32px] lg:text-[32px] lg:leading-[38.4px] bold"
-                  : "regular text-[20px] leading-[24px] lg:text-[30px] md:text-[26px] md:leading-[28px]"
-              } `}
-            >
-              <span
-                className={`${
-                  index === activeIndex
-                    ? "h-[20px] md:h-[27px] w-[3px] md:w-[5px] me-1 bg-[#F04B23]"
-                    : ""
+        <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] ">
+          <div className="flex flex-col justify-center lg:space-y-4 md:space-y-3 space-y-1 mt-[24px]">
+            {sections.map((section, index) => (
+              <motion.button
+                key={index}
+                onClick={() => handleTextNavigationClick(index)}
+                whileHover={{ scale: 1.05 }} // Hover effect
+                whileTap={{ scale: 0.95 }} // Tap effect
+                className={`text-lg flex items-center text-left transition-all duration-300 text-black ${
+                  slides[activeIndex].section === section
+                    ? "ms-1 text-[24px] md:text-[28px] md:leading-[32px] lg:text-[32px] lg:leading-[38.4px] bold"
+                    : "regular text-[20px] leading-[24px] lg:text-[30px] md:text-[26px] md:leading-[28px]"
                 } `}
-              ></span>
-              {slide.nav}
-            </motion.button>
-          ))}
+              >
+                <span
+                  className={`${
+                    slides[activeIndex].section === section
+                      ? "h-[20px] md:h-[27px] w-[3px] md:w-[5px] me-1 bg-[#F04B23]"
+                      : ""
+                  } `}
+                ></span>
+                {section}
+              </motion.button>
+            ))}
+          </div>
         </div>
-
         {/* Main Slider */}
         <div
-          className="w-full lg:w-[827px] h-[580px] md:h-[360px] lg:h-[453px] rounded-xl overflow-hidden"
+          className="w-full lg:w-[827px]  md:h-[360px] lg:h-[453px] rounded-xl overflow-hidden"
           data-aos="fade-left"
         >
           <Swiper
@@ -322,7 +313,32 @@ const Teammember: React.FC = () => {
                   transition={{ duration: 0.5 }} // Duration of animation
                   className="w-full h-full"
                 >
-                  <Nestedmember data={slide.slides} />
+                  <div
+                    className={`p-3 lg:p-14 flex flex-col md:flex-row gap-5 lg:justify-start lg:items-center bg-[#F04B23] h-[580px] md:h-[360px] lg:h-[453px] rounded-[20px] ${
+                      slide.content === ""
+                        ? "h-[519px] overflow-hidden rounded-[20px]"
+                        : "h-[580px]"
+                    }`}
+                  >
+                    <img
+                      src={slide.image}
+                      className="w-full md:h-[333px] md:w-[305px] lg:w-[305px] lg:h-[333px] rounded-[20px] object-cover"
+                      alt={slide.name}
+                    />
+                    <div className="flex lg:justify-start lg:items-start  flex-col md:justify-center  ">
+                      {" "}
+                      <h1 className="text-[24px] lg:text-[36px] text-white  bold lg:leading-[43.2px] ">
+                        {slide.name}
+                      </h1>
+                      <p className="text-white md:text-[22px] semibold md:leading-[26px] text-[18px] leading-[22.2px]  text-left">
+                        {slide.designation}
+                      </p>
+                      <p className="text-sm regular lg:text-base mt-3 lg:mt-4 text-white">
+                        {slide.content}
+                      </p>
+                    </div>
+                  </div>
+                  {/* <Nestedmember data={slide.slides} /> */}
                 </motion.div>
               </SwiperSlide>
             ))}
