@@ -4,11 +4,12 @@ import img from "./../assets/header1.png";
 import ReactPlayer from "react-player";
 import arrow from "./../assets/arrow1.png";
 import Pulsebutton from "./TolkingHeaderButton/PulseButton";
+import user from "./../assets/helping.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // For animations
 import AOS from "aos"; // For scroll animations
 import "aos/dist/aos.css"; // AOS animation styles
-import arrowg from './../assets/arrow.png'
+import arrowg from "./../assets/arrow.png";
 interface MousePosition {
   x: number | string;
   y: number | string;
@@ -120,7 +121,7 @@ const Header: React.FC = () => {
             </div>
           </motion.div>
         </div>
-        <div className="md:mt-[102px] mt-[80px]">
+        <div className="md:mt-[102px] relative mt-[80px]">
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -168,6 +169,20 @@ const Header: React.FC = () => {
               </motion.div>
             )}
           </motion.div>
+         <div className="absolute -right-36 top-[44%]" data-aos={"fade-left"}>
+         <div      className="md:w-[325px] w-[280px] md:h-[97px] h-[87px] rounded-[64px] -rotate-90  gap-4 -right-36 cursor-pointer  flex flex-row-reverse items-center bg-[#F04B23] p-2">
+            <img
+              src={user}
+              className="w-[78px] h-[78px] rounded-full rotate-90"
+              alt=""
+            />
+            <h1
+              className="text-white semibold   text-[36px] leading-[43.2px] rotate-180"
+            >
+              Need Help ?
+            </h1>
+          </div>
+         </div>
         </div>
       </div>
     </motion.div>

@@ -4,8 +4,9 @@ import React, { useState, useEffect } from "react";
 import arrow from "./../assets/arrow1.png";
 import Swal from "sweetalert2";
 import ReCAPTCHA from "react-google-recaptcha";
-import call from "./../assets/call.png";
+import call from "./../assets/whatsappf.png";
 import email from "./../assets/email.png";
+import location from "./../assets/location.png";
 import user from "./../assets/contactuser.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -79,22 +80,26 @@ const Contact: React.FC = () => {
           className="contact-content lg:w-[400px]"
           data-aos="fade-right" // Apply AOS fade-right animation
         >
-          <h1 className="text-black text-[40px] lg:text-[64px] font-bold leading-[46px] lg:leading-[76.8px]">
+          <h1 className="text-[#000030] text-[40px] lg:text-[64px] font-bold leading-[46px] lg:leading-[76.8px]">
             Contact Us
           </h1>
-          <p className="text-[16px] lg:text-[20px] font-[400] leading-[24px] lg:leading-[30px] mt-2">
+          <p className="text-[16px] lg:text-[20px] font-[400] regulars leading-[24px] lg:leading-[30px] mt-2 text-[#000030]">
             Have questions, ideas, or just want to say hello? We're here for
             you. Reach out through the details below or use the form to send a
             quick message. We'll get back to you promptly.
           </p>
           <div className="mt-8 lg:mt-10">
             <div className="flex gap-2 items-center">
-              <img src={call} alt="Phone" className="w-6 h-6" />
-              <p className="text-[16px] lg:text-[20px]">+880745875745</p>
+              <img src={call} alt="Phone" className="w-10 h-10" />
+              <p className="text-[16px] regular lg:text-[20px] text-[#000030]">+880745875745</p>
             </div>
             <div className="flex gap-2 items-center mt-4">
-              <img src={email} alt="Email" className="w-6 h-6" />
-              <p className="text-[16px] lg:text-[20px]">example@gmail.com</p>
+              <img src={email} alt="Email" className="w-10 h-10" />
+              <p className="text-[16px] regular lg:text-[20px] text-[#000030]">example@gmail.com</p>
+            </div>
+            <div className="flex gap-2 items-center mt-4">
+              <img src={location} alt="Email" className="w-10 h-10" />
+              <p className="text-[16px] text-[#000030] regulars lg:text-[20px]">Mirpur 11 , Dhaka </p>
             </div>
           </div>
         </div>
@@ -110,29 +115,37 @@ const Contact: React.FC = () => {
         </div>
         {/* Form Section */}
         <div
-          className="w-full lg:w-[422px] md:mt-0 lg:mt-10 -mt-16 border bg-white rounded-xl p-6 lg:p-8 h-auto"
+          className="w-full lg:w-[422px] lg:-mt-10 md:mt-0 -mt-[35px] border bg-white rounded-xl p-6 lg:p-8 h-auto"
           data-aos="fade-left" // Apply AOS fade-left animation
         >
+          <div className="flex flex-col  justify-center items-center gap-[5px] mb-[18px] mt-[10px]">
+            <h3 className="text-[#000030]  bold md:text-[24px] text-[20px] leading-[24.5px]   md:leading-[28.8px]">
+              Get in Touch
+            </h3>
+            <p className="md:text-[20px] regulars md:leading-[30px] text-[#000030] text-[16px] leading-[20.5px] ">
+              Have ideas to share ? reach out !
+            </p>
+          </div>
           <form
             onSubmit={(e) => handalSubmit(e)}
             className="flex flex-col gap-4"
           >
             <input
-              className="w-full h-[50px] lg:h-[70px] rounded-[8px] py-3 px-5 bg-[#F8F4F1] focus:outline-none"
+              className="w-full h-[50px] lg:h-[70px] rounded-[8px] py-3 px-5 regulars bg-[#F8F4F1] focus:outline-none"
               type="text"
               placeholder="Full Name"
               name="name"
               required
             />
             <input
-              className="w-full h-[50px] lg:h-[70px] rounded-[8px] py-3 px-5 bg-[#F8F4F1] focus:outline-none"
+              className="w-full h-[50px] lg:h-[70px] rounded-[8px] regulars py-3 px-5 bg-[#F8F4F1] focus:outline-none"
               type="email"
               placeholder="Email Address"
               name="email"
               required
             />
             <textarea
-              className="w-full h-[120px] lg:h-[146px] rounded-[8px] py-3 px-5 bg-[#F8F4F1] focus:outline-none"
+              className="w-full h-[120px] lg:h-[146px] rounded-[8px] py-3 px-5 regulars bg-[#F8F4F1] focus:outline-none"
               placeholder="Write your Message"
               name="message"
               required
@@ -144,8 +157,8 @@ const Contact: React.FC = () => {
                 onChange={onChange}
               />
               <button
-                className={`py-3 lg:py-4 px-5 lg:px-6 bg-black text-white font-bold rounded-[8px] flex justify-center items-center shadow-md transition-opacity duration-200 ${
-                  !valid ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+                className={`py-3 lg:py-4 px-5 lg:px-6 bg-[#000030] text-white font-bold rounded-[47px] flex justify-center items-center shadow-md transition-opacity duration-200 ${
+                  !valid ? " cursor-not-allowed" : "cursor-pointer"
                 }`}
                 disabled={!valid}
               >

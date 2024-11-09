@@ -57,7 +57,7 @@ const Navbar = () => {
             title={"Contact"}
           />
         </div>
-        <div className="justify-center items-center border-[#000030]    lg:flex hidden w-[181px] h-[55px] border py-4 px-8 rounded-[40px] text-[20px] font-[400] regular">
+        <div className="justify-center items-center border-[#000030]    lg:flex hidden w-[181px] h-[55px] border py-4 px-8 rounded-[40px] text-[20px] font-[400] regular cursor-pointer">
           Call a Book
         </div>
         <div className="lg:hidden text-[#6e6a6a] ">

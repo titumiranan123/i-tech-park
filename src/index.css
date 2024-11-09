@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,6 +40,10 @@
   font-family: regular;
   src: url(./assets/font/THICCCBOI-Regular.ttf);
 }
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
 .extrabold{
 font-family: extrabold;
 font-weight: 7900;
@@ -52,6 +59,10 @@ font-weight: 600;
 .regular{
 font-family: regular;
 font-weight: 500;
+}
+.regulars{
+font-family: regular;
+font-weight: 400;
 }
 section {
   height: 100vh;

@@ -12,6 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS for animations
 
 const Footer: React.FC = () => {
+  
   useEffect(() => {
     AOS.init({
       duration: 1200, // Duration for animations
@@ -139,8 +140,8 @@ const Footer: React.FC = () => {
 
           {/* Contact Section */}
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            // initial={{ scale: 0 }}
+            // animate={{ scale: 1 }}
             transition={{ duration: 0.8 }}
             className="lg:ms-10"
             data-aos="flip-up"
@@ -152,6 +153,7 @@ const Footer: React.FC = () => {
               <motion.a
                 href="tel:880354564654"
                 className="flex gap-2 items-center text-white regular"
+                data-aos="fade-right"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
@@ -161,6 +163,7 @@ const Footer: React.FC = () => {
               <motion.a
                 href="mailto:example@gmail.com"
                 className="flex gap-2 items-center text-white regular"
+                data-aos="fade-right"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
