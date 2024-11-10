@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-black py-10 lg:py-0 lg:px-0 px-4 mt-[60px] lg:mt-[120px] md:mt-[60px]">
+    <div className="bg-black py-10 lg:py-0 lg:px-0 px-4 mt-[80px] lg:mt-[120px] md:mt-[90px]">
       <div className="max-w-[1240px] mx-auto flex flex-col">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-16 gap-8">
           {/* Logo and Description Section */}

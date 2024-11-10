@@ -170,10 +170,10 @@ const Header: React.FC = () => {
             )}
           </motion.div>
           <div
-            className="absolute  lg:-right-36 md:-right-[110px] -right-[60px] lg:top-[44%] top-[40%]"
+            className="absolute  lg:-right-36 md:-right-[110px] -right-[60px] lg:top-[44%] top-[39%]"
             data-aos={"fade-left"}
           >
-            <div className="lg:w-[325px] md:w-[270px] w-[135px] md:h-[75px]  h-[45px] rounded-[64px] -rotate-90  lg:gap-4  cursor-pointer gap-1 flex flex-row-reverse justify-between items-center bg-[#F04B23] md:p-2 p-1">
+            <div className="lg:w-[325px] md:w-[270px] w-[145px] md:h-[75px]  h-[45px] rounded-[64px] -rotate-90  lg:gap-4  cursor-pointer gap-1 flex flex-row-reverse justify-between items-center bg-[#F04B23] md:p-2 p-1">
               <img
                 src={user}
                 className="lg:w-[78px] md:w-[60px] md:h-[60px] lg:h-[78px] rounded-full rotate-90 w-[40px] h-[40px]"

@@ -275,7 +275,7 @@ const Teammember: React.FC = () => {
                   <div
                     className={`p-3 lg:p-14 flex flex-col md:flex-row gap-5 lg:justify-start lg:items-center bg-[#F04B23] h-[580px] md:h-[360px] lg:h-[453px] rounded-[20px] ${
                       slide.content === ""
-                        ? "h-[519px] overflow-hidden rounded-[20px]"
+                        ? "h-[520px] overflow-hidden rounded-[20px]"
                         : "h-[580px]"
                     }`}
                   >
@@ -284,9 +284,9 @@ const Teammember: React.FC = () => {
                       className="w-full md:h-[333px] md:w-[305px] lg:w-[305px] lg:h-[333px] rounded-[20px] object-cover"
                       alt={slide.name}
                     />
-                    <div className="flex lg:justify-start lg:items-start  flex-col md:justify-center  ">
+                    <div className="flex lg:justify-start lg:items-start  flex-col md:justify-center   ">
                       {" "}
-                      <h1 className="text-[24px] lg:text-[36px] text-white  bold lg:leading-[43.2px] ">
+                      <h1 className="text-[24px] lg:text-[36px] text-white  bold lg:leading-[43.2px] md:text-nowrap ">
                         {slide.name}
                       </h1>
                       <p className="text-white md:text-[22px] semibold md:leading-[26px] text-[18px] leading-[22.2px]  text-left">

@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="relative contact lg:h-[752px] -mb-[120px] h-auto  mx-auto lg:mt-[0px]  px-4 ">
+    <div className="relative contact lg:h-[752px] lg:-mb-[120px]  h-auto  mx-auto lg:mt-[0px]  px-4 ">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:gap-36 md:gap-0 gap-8 lg:pt-[81px] pt-[60px] max-w-[1240px] mx-auto">
         {/* Contact Content */}
         <div
@@ -173,8 +173,6 @@ const Contact: React.FC = () => {
           </form>
         </div>
       </div>
-
-      {/* Floating Image */}
     </div>
   );
 };
