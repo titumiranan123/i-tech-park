@@ -22,7 +22,7 @@ const Nested: React.FC<{ data: any;}> = React.memo(({
       
             <img
             loading="lazy"
-              className="lg:w-[621px] mt-[46px] rounded-[20px] lg:h-[370px]"
+              className="lg:w-[621px] mx-auto mt-[46px] rounded-[20px] lg:h-[370px]"
               src={s.image}
               alt={s.title}
             />
