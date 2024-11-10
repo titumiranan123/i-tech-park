@@ -169,20 +169,21 @@ const Header: React.FC = () => {
               </motion.div>
             )}
           </motion.div>
-         <div className="absolute -right-36 top-[44%]" data-aos={"fade-left"}>
-         <div      className="md:w-[325px] w-[280px] md:h-[97px] h-[87px] rounded-[64px] -rotate-90  gap-4 -right-36 cursor-pointer  flex flex-row-reverse items-center bg-[#F04B23] p-2">
-            <img
-              src={user}
-              className="w-[78px] h-[78px] rounded-full rotate-90"
-              alt=""
-            />
-            <h1
-              className="text-white semibold   text-[36px] leading-[43.2px] rotate-180"
-            >
-              Need Help ?
-            </h1>
+          <div
+            className="absolute  lg:-right-36 md:-right-[110px] -right-[60px] lg:top-[44%] top-[40%]"
+            data-aos={"fade-left"}
+          >
+            <div className="lg:w-[325px] md:w-[270px] w-[135px] md:h-[75px]  h-[45px] rounded-[64px] -rotate-90  lg:gap-4  cursor-pointer gap-1 flex flex-row-reverse justify-between items-center bg-[#F04B23] md:p-2 p-1">
+              <img
+                src={user}
+                className="lg:w-[78px] md:w-[60px] md:h-[60px] lg:h-[78px] rounded-full rotate-90 w-[40px] h-[40px]"
+                alt="user"
+              />
+              <h1 className="text-white semibold   lg:text-[36px] md:text-[30px]  lg:leading-[43.2px] text-[14px] rotate-180 ms-2 " >
+                Need Help ?
+              </h1>
+            </div>
           </div>
-         </div>
         </div>
       </div>
     </motion.div>

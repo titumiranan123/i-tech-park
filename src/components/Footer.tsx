@@ -177,7 +177,7 @@ const Footer: React.FC = () => {
         {/* Footer Bottom Line and Rights Section */}
         <div className="-mt-5">
           <motion.div
-            className="text-white text-[20px] regular flex justify-center items-center text-center mb-6 mt-4"
+            className="text-white text-[20px] regulars flex justify-center items-center text-center mb-6 mt-4"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1,y:0 }}
             transition={{ duration: 4.2 }}

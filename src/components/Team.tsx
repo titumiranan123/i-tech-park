@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, {  useRef, useState } from "react";
+import React, {  useCallback, useMemo, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Mousewheel } from "swiper/modules";
 import { motion } from "framer-motion"; // Import Framer Motion
@@ -42,7 +42,7 @@ interface Slide {
 const Teammember: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<any>(null);
-  const sections = [
+  const sections =useMemo(()=> [
     "Core Team",
     "Design",
     "Digital Marketing",
@@ -50,8 +50,8 @@ const Teammember: React.FC = () => {
     "Web Development",
     "Support",
     "SEO",
-  ];
-  const slides: Slide[] = [
+  ],[]);
+  const slides: Slide[] =useMemo(()=> [
     {
       section: "Core Team",
       name: "Masud Rana",
@@ -80,7 +80,7 @@ const Teammember: React.FC = () => {
       name: "Abdur Rabbi",
       designation: "Logo Designer- Team Lead",
       content:
-        "Our CEO is a visionary leader who drives innovation and inspires exclience , guiding our team to consistently achieve outstanding results.",
+        "",
       image: design1,
     },
     {
@@ -200,51 +200,10 @@ const Teammember: React.FC = () => {
       content: "",
       image: seo1,
     },
-  ];
-  // useEffect(() => {
-  //   const animateElement = (
-  //     selector: string,
-  //     animationClass: string
-  //   ): (() => void) | undefined => {
-  //     const element = document.querySelector(selector);
-
-  //     const observer = new IntersectionObserver((entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           entry.target.classList.add(animationClass);
-  //         }
-  //       });
-  //     });
-
-  //     if (element) {
-  //       observer.observe(element);
-  //     }
-
-  //     return () => {
-  //       if (element) {
-  //         observer.unobserve(element);
-  //       }
-  //     };
-  //   };
-
-  //   // Observe both buttons
-  //   const unobservePrev = animateElement(
-  //     ".teamswiper .swiper-button-prev",
-  //     "bounceInLeft"
-  //   );
-  //   const unobserveNext = animateElement(
-  //     ".teamswiper .swiper-button-next",
-  //     "bounceInRight"
-  //   );
-
-  //   return () => {
-  //     if (unobservePrev) unobservePrev();
-  //     if (unobserveNext) unobserveNext();
-  //   };
-  // }, []);
-
+  ],[]);
+ 
   // Function to handle text-based navigation clicks
-  const handleTextNavigationClick = (sectionIndex: number) => {
+  const handleTextNavigationClick = useCallback((sectionIndex: number) => {
     // Get the index of the first slide of that section
     const sectionFirstIndex = slides.findIndex(
       (slide) => slide.section === sections[sectionIndex]
@@ -252,7 +211,7 @@ const Teammember: React.FC = () => {
     if (sectionFirstIndex !== -1 && swiperRef.current) {
       swiperRef.current.slideTo(sectionFirstIndex);
     }
-  };
+  },[sections, slides]);
 
   return (
     <div className="max-w-[1240px] mx-auto mt-[60px] lg:mt-[120px]">
@@ -320,7 +279,7 @@ const Teammember: React.FC = () => {
                         : "h-[580px]"
                     }`}
                   >
-                    <img
+                    <img loading="lazy"
                       src={slide.image}
                       className="w-full md:h-[333px] md:w-[305px] lg:w-[305px] lg:h-[333px] rounded-[20px] object-cover"
                       alt={slide.name}
@@ -338,7 +297,7 @@ const Teammember: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  {/* <Nestedmember data={slide.slides} /> */}
+                  
                 </motion.div>
               </SwiperSlide>
             ))}
@@ -348,5 +307,4 @@ const Teammember: React.FC = () => {
     </div>
   );
 };
-
 export default Teammember;

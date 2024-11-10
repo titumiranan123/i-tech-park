@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
-const Nested: React.FC<{ data: any;}> = ({
+const Nested: React.FC<{ data: any;}> = React.memo(({
   data
 }) => {
   return (
@@ -21,6 +21,7 @@ const Nested: React.FC<{ data: any;}> = ({
         <SwiperSlide key={idx}>
       
             <img
+            loading="lazy"
               className="lg:w-[621px] mt-[46px] rounded-[20px] lg:h-[370px]"
               src={s.image}
               alt={s.title}
@@ -30,6 +31,6 @@ const Nested: React.FC<{ data: any;}> = ({
       ))}
     </SwiperComponent>
   );
-};
+});
 
 export default Nested;
