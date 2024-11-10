@@ -39,7 +39,7 @@ const Blogcard: React.FC<BlogCardProps> = ({ blog, onClick }) => {
           className="py-3 px-6 w-[150px] md:w-[230px] mt-[28px] md:mt-[48px]  bg-[#000030] rounded-[40px] flex justify-center items-center opensans font-[600] md:text-[20px] md:leading-[27.24px] text-white shadow text-[12px] gap-2 "
         >
          Read More
-          <img className="md:w-[36px]  md:h-[36px] w-6 h-6" src={arrow} alt="" />
+          <img className="md:w-[36px]  md:h-[36px] w-6 h-6" src={arrow} alt="arrow" loading="lazy" decoding="async" />
         </button>
       </div>
     </div>

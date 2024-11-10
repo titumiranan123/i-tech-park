@@ -97,7 +97,7 @@ const Aboutus: React.FC = () => {
             <Link to={"/about"} target="_blank">
               More About Us
             </Link>
-            <img className="w-5 h-5 lg:w-8 lg:h-8" src={arrow} alt="" />
+            <img className="w-5 h-5 lg:w-8 lg:h-8" src={arrow} alt="arrow" loading="lazy" decoding="async" />
           </motion.div>
         </motion.div>
       </div>

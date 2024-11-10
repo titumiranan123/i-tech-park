@@ -73,7 +73,8 @@ const Header: React.FC = () => {
               <img
                 className="absolute left-[16%] lg:h-[280px] lg:w-[180px] w-[100px] h-[240px] top-40 md:top-32 -z-10"
                 src={arrowg}
-                alt=""
+                alt="arrow"
+                loading="lazy" decoding="async"
               />
             </div>
             <div className="lg:w-1/2">
@@ -107,7 +108,8 @@ const Header: React.FC = () => {
                   <img
                     className="md:w-[36px] md:h-[36px] w-6 h-6"
                     src={arrow}
-                    alt=""
+                    alt="arrow"
+                    loading="lazy" decoding="async"
                   />
                 </Link>
                 <Link
@@ -134,6 +136,8 @@ const Header: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <img
+                loading="lazy"
+                decoding="async" 
                   src={img}
                   className="lg:w-[1240px] lg:h-[698px] md:w-[720px]  md:h-[405px]"
                   alt="Displayed"
@@ -173,11 +177,12 @@ const Header: React.FC = () => {
             className="absolute  lg:-right-36 md:-right-[110px] -right-[60px] lg:top-[44%] top-[39%]"
             data-aos={"fade-left"}
           >
-            <div className="lg:w-[325px] md:w-[270px] w-[145px] md:h-[75px]  h-[45px] rounded-[64px] -rotate-90  lg:gap-4  cursor-pointer gap-1 flex flex-row-reverse justify-between items-center bg-[#F04B23] md:p-2 p-1">
+            <div className="lg:w-[325px] lg:h-[90px] md:w-[270px] w-[145px] md:h-[75px]  h-[45px] rounded-[64px] -rotate-90  lg:gap-4  cursor-pointer gap-1 flex flex-row-reverse justify-between items-center bg-[#F04B23] md:p-2 p-1">
               <img
                 src={user}
                 className="lg:w-[78px] md:w-[60px] md:h-[60px] lg:h-[78px] rounded-full rotate-90 w-[40px] h-[40px]"
                 alt="user"
+                loading="lazy" decoding="async"
               />
               <h1 className="text-white semibold   lg:text-[36px] md:text-[30px]  lg:leading-[43.2px] text-[14px] rotate-180 ms-2 " >
                 Need Help ?

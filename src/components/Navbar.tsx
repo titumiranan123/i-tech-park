@@ -32,7 +32,7 @@ const Navbar = () => {
     <div className={`relative  lg:px-0 px-4    md:py-1 lg:py-0`}>
       <nav className="flex justify-between max-w-[1240px] md:h-[120px] h-[100px] mx-auto items-center">
         <a href="/" className="logo ">
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo" loading="lazy" decoding="async" />
         </a>
         <div
           id="navbar"

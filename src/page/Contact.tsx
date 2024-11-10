@@ -90,15 +90,15 @@ const Contact: React.FC = () => {
           </p>
           <div className="mt-8 lg:mt-10">
             <div className="flex gap-2 items-center">
-              <img src={call} alt="Phone" className="w-10 h-10" />
+              <img src={call} alt="Phone" className="w-10 h-10" loading="lazy" decoding="async" />
               <p className="text-[16px] regular lg:text-[20px] text-[#000030]">+880745875745</p>
             </div>
             <div className="flex gap-2 items-center mt-4">
-              <img src={email} alt="Email" className="w-10 h-10" />
+              <img src={email} alt="Email" className="w-10 h-10" loading="lazy" decoding="async" />
               <p className="text-[16px] regular lg:text-[20px] text-[#000030]">example@gmail.com</p>
             </div>
             <div className="flex gap-2 items-center mt-4">
-              <img src={location} alt="Email" className="w-10 h-10" />
+              <img src={location} alt="Email" className="w-10 h-10" loading="lazy" decoding="async" />
               <p className="text-[16px] text-[#000030] regulars lg:text-[20px]">Mirpur 11 , Dhaka </p>
             </div>
           </div>
@@ -111,6 +111,7 @@ const Contact: React.FC = () => {
             className="w-[250px] lg:w-[418px] h-auto"
             src={user}
             alt="User"
+            loading="lazy" decoding="async"
           />
         </div>
         {/* Form Section */}

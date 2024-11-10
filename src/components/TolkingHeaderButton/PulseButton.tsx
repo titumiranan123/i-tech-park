@@ -15,8 +15,8 @@ const PulseButton = ({ onHideImage }: any) => {
                 onClick={openVideo}
                 aria-label="Play video"
             >
-                <img src={img1} alt="" />
-                <img className=" animate-spin   absolute  -top-[0px]" src={img} alt="" />
+                <img src={img1} alt="img1" loading="lazy" decoding="async" />
+                <img className=" animate-spin   absolute  -top-[0px]" src={img} alt="img" loading="lazy" decoding="async" />
             </button>
         </div>
     );

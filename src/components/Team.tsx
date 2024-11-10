@@ -279,10 +279,11 @@ const Teammember: React.FC = () => {
                         : "h-[580px]"
                     }`}
                   >
-                    <img loading="lazy"
+                    <img 
                       src={slide.image}
                       className="w-full md:h-[333px] md:w-[305px] lg:w-[305px] lg:h-[333px] rounded-[20px] object-cover"
                       alt={slide.name}
+                      loading="lazy" decoding="async"
                     />
                     <div className="flex lg:justify-start lg:items-start  flex-col md:justify-center   ">
                       {" "}

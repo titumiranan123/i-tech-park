@@ -89,20 +89,20 @@ const Contactsection: React.FC = () => {
           </p>
           <div className="mt-8 lg:mt-10">
             <div className="flex gap-2 items-center">
-              <img src={call} alt="Phone" className="w-10 h-10" />
+              <img src={call} alt="Phone" className="w-10 h-10" loading="lazy" decoding="async" />
               <p className="text-[16px] regular lg:text-[20px] text-[#000030]">+880745875745</p>
             </div>
             <div className="flex gap-2 items-center mt-4">
-              <img src={email} alt="Email" className="w-10 h-10" />
+              <img src={email} alt="Email" className="w-10 h-10" loading="lazy" decoding="async" />
               <p className="text-[16px] regular lg:text-[20px] text-[#000030]">example@gmail.com</p>
             </div>
             <div className="flex gap-2 items-center mt-4">
-              <img src={location} alt="Email" className="w-10 h-10" />
+              <img src={location} alt="Email" className="w-10 h-10" loading="lazy" decoding="async" />
               <p className="text-[16px] text-[#000030] regulars lg:text-[20px]">Mirpur 11 , Dhaka </p>
             </div>
           </div>
         </div>
-        
+
         <div
           className="lg:absolute lg:mt-0 md:mt-10
            lg:-bottom-14 -z-10 left-[30%] transform -translate-x-1/2"
