@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="relative contact lg:h-[752px] -mb-[120px] h-auto  mx-auto lg:mt-[0px]  px-4 ">
-      <div className="flex flex-col lg:flex-row justify-between items-center lg:gap-36 gap-8 lg:pt-[81px] pt-[60px] max-w-[1240px] mx-auto">
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:gap-36 md:gap-0 gap-8 lg:pt-[81px] pt-[60px] max-w-[1240px] mx-auto">
         {/* Contact Content */}
         <div
           className="contact-content lg:w-[400px]"
@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
         <div
-          className="lg:absolute lg:-bottom-[0px] left-[35%] transform -translate-x-1/2"
+          className="lg:absolute lg:-bottom-[0px] left-[35%] md:-bottom-5 transform -translate-x-1/2"
           data-aos="fade-up" // Apply AOS fade-up animation
         >
           <img

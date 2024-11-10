@@ -46,7 +46,7 @@ const Contactstate: React.FC = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="max-w-[1240px] mx-auto lg:mt-[120px] md:mt-[80px] mt-[60px] px-4"
+      className="max-w-[1240px] mx-auto lg:mt-[120px] md:mt-[80px] mt-[80px] lg:mb-0 px-4"
     >
       <div
         className="lg:w-[1200px] w-full lg:h-[270px] bg-[#0E141E] rounded-[24px] py-[39px] px-4 lg:px-[36px] grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-4"

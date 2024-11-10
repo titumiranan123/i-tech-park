@@ -214,7 +214,7 @@ const Teammember: React.FC = () => {
   },[sections, slides]);
 
   return (
-    <div className="max-w-[1240px] mx-auto mt-[60px] lg:mt-[120px]">
+    <div className="max-w-[1240px] mx-auto mt-[80px] lg:mt-[120px]">
       <Heading
         title="Our Team"
         subtitle="Our team is a dynamic blend of creativity, expertise, and dedication, who are passionate about driving your success."

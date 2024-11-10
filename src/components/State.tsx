@@ -17,7 +17,7 @@ const State: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[1240px] mx-auto lg:mt-[120px] md:mt-[80px] mt-10 px-4">
+    <div className="max-w-[1240px] mx-auto lg:mt-[120px] md:mt-[80px] mt-[80px] px-4">
       <div className="lg:w-[1200px] lg:h-[270px] bg-[#0E141E] rounded-[24px] py-[39px] px-[50px] grid grid-cols-1 lg:grid-cols-4 gap-10 md:grid-cols-2 ">
         {[
           { img: project, end: 3, label: "Complete Project", suffix: "K" },

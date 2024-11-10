@@ -252,7 +252,7 @@ section.bg-gray {
 }
 @media (min-width: 641px) and (max-width: 820px) {
   .swiper {
-    height: 750px;
+    height: 680px;
   }
   .swiper-button-prev{
      left:  auto !important;
@@ -273,7 +273,7 @@ section.bg-gray {
     border-radius: 50%;
 }
 .teamswiper{
-  height: 355px;
+  height: 375px;
 }
 .teamswiperchild{
    height: 355px;
