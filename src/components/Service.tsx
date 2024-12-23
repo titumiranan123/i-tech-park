@@ -231,15 +231,26 @@ const TextNavigationSlider: React.FC = () => {
       </div>
 
       {/* Main Slider */}
-      <div className="w-full  lg:w-[743px] lg:h-[730px]  overflow-hidden  ">
+      <div className="w-full  lg:w-[743px] lg:h-[730px]  overflow-hidden">
         <Swiper
           direction="vertical"
           spaceBetween={30}
           slidesPerView={1}
-          mousewheel={true}
+          mousewheel={{
+            forceToAxis: true,
+            releaseOnEdges: true, // This allows native scroll on edges
+          }}
           modules={[Navigation, Mousewheel]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          onReachEnd={() => {
+            // Let the browser handle the scroll beyond the slider
+            document.body.style.overflowY = "auto";
+          }}
+          onReachBeginning={() => {
+            // Similarly, allow upward scrolling
+            document.body.style.overflowY = "auto";
+          }}
           className="w-full lg:h-[780px] "
         >
           {slides.map((slide, index) => (

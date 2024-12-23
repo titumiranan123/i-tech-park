@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, {  useCallback, useMemo, useRef, useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Mousewheel } from "swiper/modules";
 import { motion } from "framer-motion"; // Import Framer Motion
@@ -42,176 +42,184 @@ interface Slide {
 const Teammember: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<any>(null);
-  const sections =useMemo(()=> [
-    "Core Team",
-    "Design",
-    "Digital Marketing",
-    "Video Editing",
-    "Web Development",
-    "Support",
-    "SEO",
-  ],[]);
-  const slides: Slide[] =useMemo(()=> [
-    {
-      section: "Core Team",
-      name: "Masud Rana",
-      designation: "Founder & Chief Executive Officer.",
-      content:
-        "Our CEO is a visionary leader who drives innovation and inspires exclience , guiding our team to consistently achieve outstanding results.",
-      image: core1,
-    },
-    {
-      section: "Core Team",
-      name: "Abu Bakar Chowdhury",
-      designation: "Co Founder & Chief Operating Officer",
-      content: "",
-      image: core2,
-    },
-    {
-      section: "Core Team",
-      name: "Masud Rana",
-      designation: "Chief technology officer",
-      content: "",
-      image: core3,
-    },
+  const sections = useMemo(
+    () => [
+      "Core Team",
+      "Design",
+      "Digital Marketing",
+      "Video Editing",
+      "Web Development",
+      "Support",
+      "SEO",
+    ],
+    []
+  );
+  const slides: Slide[] = useMemo(
+    () => [
+      {
+        section: "Core Team",
+        name: "Masud Rana",
+        designation: "Founder & Chief Executive Officer.",
+        content:
+          "Our CEO is a visionary leader who drives innovation and inspires exclience , guiding our team to consistently achieve outstanding results.",
+        image: core1,
+      },
+      {
+        section: "Core Team",
+        name: "Abu Bakar Chowdhury",
+        designation: "Co Founder & Chief Operating Officer",
+        content: "",
+        image: core2,
+      },
+      {
+        section: "Core Team",
+        name: "Masud Rana",
+        designation: "Chief technology officer",
+        content: "",
+        image: core3,
+      },
 
-    {
-      section: "Design",
-      name: "Abdur Rabbi",
-      designation: "Logo Designer- Team Lead",
-      content:
-        "",
-      image: design1,
-    },
-    {
-      section: "Design",
-      name: "Ashadul Islam Ahad",
-      designation: "Design Team - Asst. Team Lead",
-      content: "",
-      image: design2,
-    },
-    {
-      section: "Design",
-      name: "Md. Abdul Motaleb",
-      designation: "Motion Graphics - Team Lead",
-      content: "",
-      image: design3,
-    },
-    {
-      section: "Design",
-      name: "Shakal Ahmed",
-      designation: "Design Team - Team Lead",
-      content: "",
-      image: design4,
-    },
+      {
+        section: "Design",
+        name: "Abdur Rabbi",
+        designation: "Logo Designer- Team Lead",
+        content: "",
+        image: design1,
+      },
+      {
+        section: "Design",
+        name: "Ashadul Islam Ahad",
+        designation: "Design Team - Asst. Team Lead",
+        content: "",
+        image: design2,
+      },
+      {
+        section: "Design",
+        name: "Md. Abdul Motaleb",
+        designation: "Motion Graphics - Team Lead",
+        content: "",
+        image: design3,
+      },
+      {
+        section: "Design",
+        name: "Shakal Ahmed",
+        designation: "Design Team - Team Lead",
+        content: "",
+        image: design4,
+      },
 
-    {
-      section: "Digital Marketing",
-      name: "Sume Akter",
-      designation: "Marketer -team Lead",
-      content: "",
-      image: digi1,
-    },
-    {
-      section: "Digital Marketing",
-      name: "Anisur Rahman",
-      designation: "Instagram Linkdin Organic Marekting-Asst Team Lead",
-      content: "",
-      image: digi2,
-    },
-    {
-      section: "Digital Marketing",
-      name: "Dewan Miah",
-      designation: "Facebook organic marketing -Team Member",
-      content: "",
-      image: digi3,
-    },
-    {
-      section: "Digital Marketing",
-      name: "Jaynto Kumar Roy",
-      designation: "Facebook organic marketing - Team Member",
-      content: "",
-      image: digi4,
-    },
-    {
-      section: "Digital Marketing",
-      name: "Md Mostafijur Rahman",
-      designation: "Lead Generation Expert",
-      content: "",
-      image: digi5,
-    },
-    {
-      section: "Digital Marketing",
-      name: "Nijam Uddin",
-      designation: "Instagram Organic Marketing - Team Lead",
-      content: "",
-      image: digi6,
-    },
-    {
-      section: "Digital Marketing",
-      name: "Rakib Islam",
-      designation: "Instagram+Twitter Organic Marketing -Asst. Team Lead",
-      content: "",
-      image: digi7,
-    },
-    {
-      section: "Digital Marketing",
-      name: "Shihab Uddin Fahim",
-      designation: "Social Media Paid  Marketing - Team Lead",
-      content: "",
-      image: digi8,
-    },
-    {
-      section: "Digital Marketing",
-      name: "Tahmid Nabil",
-      designation: "Facebook Organic Marketing - Team Lead",
-      content: "",
-      image: digi10,
-    },
+      {
+        section: "Digital Marketing",
+        name: "Sume Akter",
+        designation: "Marketer -team Lead",
+        content: "",
+        image: digi1,
+      },
+      {
+        section: "Digital Marketing",
+        name: "Anisur Rahman",
+        designation: "Instagram Linkdin Organic Marekting-Asst Team Lead",
+        content: "",
+        image: digi2,
+      },
+      {
+        section: "Digital Marketing",
+        name: "Dewan Miah",
+        designation: "Facebook organic marketing -Team Member",
+        content: "",
+        image: digi3,
+      },
+      {
+        section: "Digital Marketing",
+        name: "Jaynto Kumar Roy",
+        designation: "Facebook organic marketing - Team Member",
+        content: "",
+        image: digi4,
+      },
+      {
+        section: "Digital Marketing",
+        name: "Md Mostafijur Rahman",
+        designation: "Lead Generation Expert",
+        content: "",
+        image: digi5,
+      },
+      {
+        section: "Digital Marketing",
+        name: "Nijam Uddin",
+        designation: "Instagram Organic Marketing - Team Lead",
+        content: "",
+        image: digi6,
+      },
+      {
+        section: "Digital Marketing",
+        name: "Rakib Islam",
+        designation: "Instagram+Twitter Organic Marketing -Asst. Team Lead",
+        content: "",
+        image: digi7,
+      },
+      {
+        section: "Digital Marketing",
+        name: "Shihab Uddin Fahim",
+        designation: "Social Media Paid  Marketing - Team Lead",
+        content: "",
+        image: digi8,
+      },
+      {
+        section: "Digital Marketing",
+        name: "Tahmid Nabil",
+        designation: "Facebook Organic Marketing - Team Lead",
+        content: "",
+        image: digi10,
+      },
 
-    {
-      section: "Video Editing",
-      name: "Al Af Muntasir",
-      designation: "Video Editor - Team Leader",
-      content: "",
-      image: video1,
-    },
+      {
+        section: "Video Editing",
+        name: "Al Af Muntasir",
+        designation: "Video Editor - Team Leader",
+        content: "",
+        image: video1,
+      },
 
-    {
-      section: "Web Development",
-      name: "Sharier Nahid",
-      designation: "Wordpress Developer- Team Lead",
-      content: "",
-      image: webdeveloper1,
-    },
+      {
+        section: "Web Development",
+        name: "Sharier Nahid",
+        designation: "Wordpress Developer- Team Lead",
+        content: "",
+        image: webdeveloper1,
+      },
 
-    {
-      section: "Support",
-      name: "Nahin Rahman",
-      designation: "Support Team",
-      content: "",
-      image: support1,
-    },
+      {
+        section: "Support",
+        name: "Nahin Rahman",
+        designation: "Support Team",
+        content: "",
+        image: support1,
+      },
 
-    {
-      section: "SEO",
-      name: "Ratul Islam Rafi",
-      designation: "SEO team - Team Member(SEO)",
-      content: "",
-      image: seo1,
-    },
-  ],[]);
- 
+      {
+        section: "SEO",
+        name: "Ratul Islam Rafi",
+        designation: "SEO team - Team Member(SEO)",
+        content: "",
+        image: seo1,
+      },
+    ],
+    []
+  );
+
   // Function to handle text-based navigation clicks
-  const handleTextNavigationClick = useCallback((sectionIndex: number) => {
-    // Get the index of the first slide of that section
-    const sectionFirstIndex = slides.findIndex(
-      (slide) => slide.section === sections[sectionIndex]
-    );
-    if (sectionFirstIndex !== -1 && swiperRef.current) {
-      swiperRef.current.slideTo(sectionFirstIndex);
-    }
-  },[sections, slides]);
+  const handleTextNavigationClick = useCallback(
+    (sectionIndex: number) => {
+      // Get the index of the first slide of that section
+      const sectionFirstIndex = slides.findIndex(
+        (slide) => slide.section === sections[sectionIndex]
+      );
+      if (sectionFirstIndex !== -1 && swiperRef.current) {
+        swiperRef.current.slideTo(sectionFirstIndex);
+      }
+    },
+    [sections, slides]
+  );
 
   return (
     <div className="max-w-[1240px] mx-auto mt-[80px] lg:mt-[120px]">
@@ -257,10 +265,21 @@ const Teammember: React.FC = () => {
             direction="vertical"
             spaceBetween={30}
             slidesPerView={1}
-            mousewheel={true}
+            mousewheel={{
+              forceToAxis: true,
+              releaseOnEdges: true, // This allows native scroll on edges
+            }}
             modules={[Navigation, Mousewheel]}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            onReachEnd={() => {
+              // Let the browser handle the scroll beyond the slider
+              document.body.style.overflowY = "auto";
+            }}
+            onReachBeginning={() => {
+              // Similarly, allow upward scrolling
+              document.body.style.overflowY = "auto";
+            }}
             className="teamswiper lg:h-[453px]"
           >
             {slides.map((slide, index) => (
@@ -279,11 +298,12 @@ const Teammember: React.FC = () => {
                         : "h-[580px]"
                     }`}
                   >
-                    <img 
+                    <img
                       src={slide.image}
                       className="w-full md:h-[333px] md:w-[305px] lg:w-[305px] lg:h-[333px] rounded-[20px] object-cover"
                       alt={slide.name}
-                      loading="lazy" decoding="async"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="flex lg:justify-start lg:items-start  flex-col md:justify-center   ">
                       {" "}
@@ -298,7 +318,6 @@ const Teammember: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
                 </motion.div>
               </SwiperSlide>
             ))}
