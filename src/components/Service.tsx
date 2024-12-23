@@ -243,6 +243,14 @@ const TextNavigationSlider: React.FC = () => {
           modules={[Navigation, Mousewheel]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          touchReleaseOnEdges={true}
+          onTouchEnd={(swiper) => {
+            if (swiper.isEnd) {
+              document.body.style.overflowY = "auto";
+            } else if (swiper.isBeginning) {
+              document.body.style.overflowY = "auto";
+            }
+          }}
           onReachEnd={() => {
             // Let the browser handle the scroll beyond the slider
             document.body.style.overflowY = "auto";

@@ -46,10 +46,10 @@ const Contactstate: React.FC = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="max-w-[1240px] mx-auto lg:mt-[120px] md:mt-[80px] mt-[80px] lg:mb-0 px-4"
+      className="max-w-[1240px] mx-auto lg:mt-[120px] md:mt-[80px] mt-[80px] lg:mb-0 lg:px-0 px-4"
     >
       <div
-        className="lg:w-[1200px] w-full lg:h-[270px] bg-[#0E141E] rounded-[24px] py-[39px] px-4 lg:px-[36px] grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-4"
+        className="lg:w-[1240px] w-full lg:h-[270px] bg-[#0E141E] rounded-[24px] py-[39px] px-4 lg:px-[36px] grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-4"
         data-aos="fade-up" // AOS animation on container
       >
         {/* Left section with WhatsApp contact */}
@@ -105,7 +105,7 @@ const Contactstate: React.FC = () => {
             <Link
               to={"https://calendly.com/imonofficial2/30min?month=2024-07"}
               target="_blank"
-              className=" sm:py-4  sm:px-6 bg-[#F04B23] py-3 px-6 w-[180px] md:w-[230px]   rounded-[40px] flex justify-center items-center opensans font-[600] md:text-[20px] md:leading-[27.24px] text-white shadow text-[12px] gap-2 z-20"
+              className=" md:py-4  md:px-8 bg-[#F04B23] py-3 px-6 w-[180px] md:w-[220px]   rounded-[40px] flex justify-between items-center opensans font-[600] md:text-[20px] md:leading-[27.24px] text-white shadow text-[12px] gap-4 z-20"
               data-aos="zoom-in" // AOS animation for button
             >
               Book a Call
