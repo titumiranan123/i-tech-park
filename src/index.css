@@ -154,8 +154,8 @@ section.bg-gray {
 .swiper-horizontal .swiper-button-prev {
   left: auto !important;
   right: 3px;
-  rotate: 90deg;
-  top: 35% !important;
+  rotate: 360deg !important;
+  top: 50% !important;
   background-color: #000000;
   width: 40px !important;
   height: 40px !important;
