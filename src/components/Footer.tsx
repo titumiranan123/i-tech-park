@@ -12,7 +12,6 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS for animations
 
 const Footer: React.FC = () => {
-  
   useEffect(() => {
     AOS.init({
       duration: 1200, // Duration for animations
@@ -33,7 +32,13 @@ const Footer: React.FC = () => {
             transition={{ duration: 1.2 }}
             data-aos="flip-left"
           >
-            <img className=" -mt-[10px]" src={logo} alt="logo" loading="lazy" decoding="async" />
+            <img
+              className=" -mt-[10px]"
+              src={logo}
+              alt="logo"
+              loading="lazy"
+              decoding="async"
+            />
             <p
               className="text-white regular text-[20px] leading-[24px] mt-4"
               data-aos="fade-up"
@@ -54,28 +59,48 @@ const Footer: React.FC = () => {
                 to={"/facebook.com"}
                 data-aos="flip-right"
               >
-                <img src={facebook} alt="facebook" loading="lazy" decoding="async" />
+                <img
+                  src={facebook}
+                  alt="facebook"
+                  loading="lazy"
+                  decoding="async"
+                />
               </Link>
               <Link
                 className="hover:scale-125 duration-150 transition-all"
                 to={"/instagram.com"}
                 data-aos="flip-right"
               >
-                <img src={instagram} alt="instagram" loading="lazy" decoding="async" />
+                <img
+                  src={instagram}
+                  alt="instagram"
+                  loading="lazy"
+                  decoding="async"
+                />
               </Link>
               <Link
                 className="hover:scale-125 duration-150 transition-all"
                 to={"/linkedin.com"}
                 data-aos="flip-right"
               >
-                <img src={linkdin} alt="linkedin" loading="lazy" decoding="async" />
+                <img
+                  src={linkdin}
+                  alt="linkedin"
+                  loading="lazy"
+                  decoding="async"
+                />
               </Link>
               <Link
                 className="hover:scale-125 duration-150 transition-all"
                 to={"/youtube.com"}
                 data-aos="flip-right"
               >
-                <img src={youtube} alt="youtube" loading="lazy" decoding="async" />
+                <img
+                  src={youtube}
+                  alt="youtube"
+                  loading="lazy"
+                  decoding="async"
+                />
               </Link>
             </div>
           </motion.div>
@@ -151,14 +176,20 @@ const Footer: React.FC = () => {
             </h1>
             <div className="flex flex-col gap-4 mt-6">
               <motion.a
-                href="tel:880354564654"
+                href="tel:8801521331108"
                 className="flex gap-2 items-center text-white regular"
                 data-aos="fade-right"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                <img className="w-4 h-4 " src={call} alt="call" loading="lazy" decoding="async" />
-                <p>+880354564654</p>
+                <img
+                  className="w-4 h-4 "
+                  src={call}
+                  alt="call"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <p>+8801521331108</p>
               </motion.a>
               <motion.a
                 href="mailto:example@gmail.com"
@@ -167,8 +198,14 @@ const Footer: React.FC = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                <img className="w-4 h-4" src={email} alt="email" loading="lazy" decoding="async" />
-                <p>example@gmail.com</p>
+                <img
+                  className="w-4 h-4"
+                  src={email}
+                  alt="email"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <p>hello@itechpark.co</p>
               </motion.a>
             </div>
           </motion.div>
@@ -179,7 +216,7 @@ const Footer: React.FC = () => {
           <motion.div
             className="text-white text-[20px] regulars flex justify-center items-center text-center mb-6 mt-4"
             initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1,y:0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 4.2 }}
           >
             © 2024 I -Tech Park BD. All Rights Reserved.

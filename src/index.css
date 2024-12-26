@@ -207,7 +207,7 @@ section.bg-gray {
   .swiper {
     height: 460px;
   }
-  .swiper-button-prev {
+  .swiper-horizontal .swiper-button-prev {
     left: auto !important;
     right: 53px !important;
     top: 3% !important;
@@ -215,6 +215,7 @@ section.bg-gray {
     width: 40px !important;
     height: 40px !important;
     border-radius: 50%;
+    rotate: 360deg !important;
   }
   .swiper-button-next {
     left: auto !important;
@@ -231,7 +232,6 @@ section.bg-gray {
   .teamswiperchild {
     height: 580px !important;
   }
-
   .teamswiper .swiper-horizontal .swiper-button-prev {
     left: auto !important;
     right: 0px;
@@ -247,7 +247,7 @@ section.bg-gray {
   .swiper {
     height: 680px;
   }
-  .swiper-button-prev {
+  .swiper-horizontal .swiper-button-prev {
     left: auto !important;
     right: 53px !important;
     top: 3% !important;
@@ -255,6 +255,7 @@ section.bg-gray {
     width: 40px !important;
     height: 40px !important;
     border-radius: 50%;
+    rotate: 360deg !important;
   }
   .swiper-button-next {
     left: auto !important;

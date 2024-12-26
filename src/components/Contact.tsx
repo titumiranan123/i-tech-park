@@ -9,7 +9,7 @@ import email from "./../assets/email.png";
 import user from "./../assets/contactuser.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import location from "./../assets/location.png"
+import location from "./../assets/location.png";
 const Contactsection: React.FC = () => {
   const [valid, setData] = useState(null);
 
@@ -89,16 +89,40 @@ const Contactsection: React.FC = () => {
           </p>
           <div className="mt-8 lg:mt-10">
             <div className="flex gap-2 items-center">
-              <img src={call} alt="Phone" className="w-10 h-10" loading="lazy" decoding="async" />
-              <p className="text-[16px] regular lg:text-[20px] text-[#000030]">+880745875745</p>
+              <img
+                src={call}
+                alt="Phone"
+                className="w-10 h-10"
+                loading="lazy"
+                decoding="async"
+              />
+              <p className="text-[16px] regular lg:text-[20px] text-[#000030]">
+                +8801521331108
+              </p>
             </div>
             <div className="flex gap-2 items-center mt-4">
-              <img src={email} alt="Email" className="w-10 h-10" loading="lazy" decoding="async" />
-              <p className="text-[16px] regular lg:text-[20px] text-[#000030]">example@gmail.com</p>
+              <img
+                src={email}
+                alt="Email"
+                className="w-10 h-10"
+                loading="lazy"
+                decoding="async"
+              />
+              <p className="text-[16px] regular lg:text-[20px] text-[#000030]">
+                hello@itechpark.co
+              </p>
             </div>
             <div className="flex gap-2 items-center mt-4">
-              <img src={location} alt="Email" className="w-10 h-10" loading="lazy" decoding="async" />
-              <p className="text-[16px] text-[#000030] regulars lg:text-[20px]">Mirpur 11 , Dhaka </p>
+              <img
+                src={location}
+                alt="Email"
+                className="w-10 h-10"
+                loading="lazy"
+                decoding="async"
+              />
+              <p className="text-[16px] text-[#000030] regulars lg:text-[20px]">
+                Mirpur 11 , Dhaka{" "}
+              </p>
             </div>
           </div>
         </div>

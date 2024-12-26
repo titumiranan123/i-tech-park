@@ -73,8 +73,8 @@ const Teammember: React.FC = () => {
       },
       {
         section: "Core Team",
-        name: "Masud Rana",
-        designation: "Chief technology officer",
+        name: "Biddut Bhattacharjee",
+        designation: "Chief Technology Officer",
         content: "",
         image: core3,
       },
@@ -111,7 +111,7 @@ const Teammember: React.FC = () => {
       {
         section: "Digital Marketing",
         name: "Sume Akter",
-        designation: "Marketer -team Lead",
+        designation: "Marketer -Team Lead",
         content: "",
         image: digi1,
       },
@@ -125,14 +125,14 @@ const Teammember: React.FC = () => {
       {
         section: "Digital Marketing",
         name: "Dewan Miah",
-        designation: "Facebook organic marketing -Team Member",
+        designation: "Facebook Organic Marketing -Team Member",
         content: "",
         image: digi3,
       },
       {
         section: "Digital Marketing",
         name: "Jaynto Kumar Roy",
-        designation: "Facebook organic marketing - Team Member",
+        designation: "Facebook Organic Marketing - Team Member",
         content: "",
         image: digi4,
       },
@@ -199,7 +199,7 @@ const Teammember: React.FC = () => {
       {
         section: "SEO",
         name: "Ratul Islam Rafi",
-        designation: "SEO team - Team Member(SEO)",
+        designation: "SEO Team - Team Member(SEO)",
         content: "",
         image: seo1,
       },

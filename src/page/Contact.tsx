@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
                 decoding="async"
               />
               <p className="text-[16px] regular lg:text-[20px] text-[#000030]">
-                example@gmail.com
+                hello@itechpark.co
               </p>
             </div>
             <div className="flex gap-2 items-center mt-4">
