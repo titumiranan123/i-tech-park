@@ -4,7 +4,6 @@ import img from "./../assets/header1.png";
 import ReactPlayer from "react-player";
 import arrow from "./../assets/arrow1.png";
 import Pulsebutton from "./TolkingHeaderButton/PulseButton";
-import user from "./../assets/helping.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // For animations
 import AOS from "aos"; // For scroll animations
@@ -74,7 +73,8 @@ const Header: React.FC = () => {
                 className="absolute left-[16%] lg:h-[280px] lg:w-[180px] w-[100px] h-[240px] top-40 md:top-32 -z-10"
                 src={arrowg}
                 alt="arrow"
-                loading="lazy" decoding="async"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="lg:w-1/2">
@@ -100,7 +100,7 @@ const Header: React.FC = () => {
                 className="flex  md:justify-normal justify-center gap-2 lg:mt-[59px] mt-[59px] md:mt-[49px]"
               >
                 <Link
-                  to={"https://calendly.com/imonofficial2/30min?month=2024-07"}
+                  to={"#"}
                   target="_blank"
                   className="py-3 px-6 w-[150px] md:w-[230px]  bg-black rounded-[40px] flex justify-center items-center opensans font-[600] md:text-[20px] md:leading-[27.24px] text-white shadow text-[12px] gap-2 z-20"
                 >
@@ -109,11 +109,12 @@ const Header: React.FC = () => {
                     className="md:w-[36px] md:h-[36px] w-6 h-6"
                     src={arrow}
                     alt="arrow"
-                    loading="lazy" decoding="async"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </Link>
                 <Link
-                  to={"https://montagemotion.com/work/video-editing"}
+                  to={"#work"}
                   target="_blank"
                   className="py-4 px-6 border rounded-[40px] md:w-[230px] w-[150px] flex justify-center border-[#000030] items-center opensans font-[400] text-[12px] text-[#000030] md:text-[20px] z-20"
                 >
@@ -136,8 +137,8 @@ const Header: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <img
-                loading="lazy"
-                decoding="async" 
+                  loading="lazy"
+                  decoding="async"
                   src={img}
                   className="lg:w-[1240px] lg:h-[698px] md:w-[720px]  md:h-[405px]"
                   alt="Displayed"
@@ -163,32 +164,16 @@ const Header: React.FC = () => {
                 className="lg:w-[1240px] lg:h-[698px] md:w-[720px] md:h-[405px] w-[320px] h-[180px] flex justify-center items-center mx-auto"
               >
                 <ReactPlayer
-                  url={"https://www.youtube.com/watch?v=4HQs-yyCrrk"}
+                  url={"https://www.youtube.com/watch?v=4HQs-yyCrr"}
                   playing
                   height={"100%"}
                   width={"100%"}
                   controls
-                  className="lg:w-[993px] lg:h-[562px] md:w-[720px] md:h-[400px] w-[300px] h-[200px]"
+                  className="lg:w-[993px]  lg:h-[562px] md:w-[720px] md:h-[400px] w-[300px] h-[200px]"
                 />
               </motion.div>
             )}
           </motion.div>
-          <div
-            className="absolute  lg:-right-36 md:-right-[110px] -right-[60px] lg:top-[44%] top-[39%]"
-            data-aos={"fade-left"}
-          >
-            <div className="lg:w-[325px] lg:h-[90px] md:w-[270px] w-[145px] md:h-[75px]  h-[45px] rounded-[64px] -rotate-90  lg:gap-4  cursor-pointer gap-1 flex flex-row-reverse justify-between items-center bg-[#F04B23] md:p-2 p-1">
-              <img
-                src={user}
-                className="lg:w-[78px] md:w-[60px] md:h-[60px] lg:h-[78px] rounded-full rotate-90 w-[40px] h-[40px]"
-                alt="user"
-                loading="lazy" decoding="async"
-              />
-              <h1 className="text-white semibold   lg:text-[36px] md:text-[30px]  lg:leading-[43.2px] text-[14px] rotate-180 ms-2 " >
-                Need Help ?
-              </h1>
-            </div>
-          </div>
         </div>
       </div>
     </motion.div>
