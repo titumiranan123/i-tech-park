@@ -6,9 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
-const Nested: React.FC<{ data: any;}> = React.memo(({
-  data
-}) => {
+const Nested: React.FC<{ data: any }> = React.memo(({ data }) => {
   return (
     <SwiperComponent
       effect="fade"
@@ -19,14 +17,14 @@ const Nested: React.FC<{ data: any;}> = React.memo(({
     >
       {data.map((s: any, idx: number) => (
         <SwiperSlide key={idx}>
-      
+          <div className="lg:w-[621px] rounded-[20px] lg:h-[370px] overflow-hidden group bg-white mt-[46px]">
             <img
-            loading="lazy"
-              className="lg:w-[621px] mx-auto mt-[46px] rounded-[20px] lg:h-[370px]"
+              loading="lazy"
+              className=" mx-auto transition-all duration-300 group-hover:scale-125  lg:w-[621px] lg:h-[370px] rounded-[20px] "
               src={s.image}
               alt={s.title}
             />
-    
+          </div>
         </SwiperSlide>
       ))}
     </SwiperComponent>

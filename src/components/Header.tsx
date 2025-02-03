@@ -100,7 +100,7 @@ const Header: React.FC = () => {
                 className="flex  md:justify-normal justify-center gap-2 lg:mt-[59px] mt-[59px] md:mt-[49px]"
               >
                 <Link
-                  to={"#"}
+                  to={"https://calendly.com/abchowdhury-m/30min"}
                   target="_blank"
                   className="py-3 px-6 w-[150px] md:w-[230px]  bg-black rounded-[40px] flex justify-center items-center opensans font-[600] md:text-[20px] md:leading-[27.24px] text-white shadow text-[12px] gap-2 z-20"
                 >
@@ -113,13 +113,12 @@ const Header: React.FC = () => {
                     decoding="async"
                   />
                 </Link>
-                <Link
-                  to={"#work"}
-                  target="_blank"
+                <a
+                  href={"#works"}
                   className="py-4 px-6 border rounded-[40px] md:w-[230px] w-[150px] flex justify-center border-[#000030] items-center opensans font-[400] text-[12px] text-[#000030] md:text-[20px] z-20"
                 >
                   See Our Works
-                </Link>
+                </a>
               </motion.div>
             </div>
           </motion.div>

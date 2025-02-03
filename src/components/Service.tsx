@@ -198,7 +198,10 @@ const TextNavigationSlider: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between lg:flex-row max-w-[1240px] items-center gap-10 md:gap-10 lg:gap-3 mx-auto mt-[60px] lg:mt-[120px] lg:px-0 px-4 ">
+    <div
+      id="works"
+      className="flex flex-col justify-between lg:flex-row max-w-[1240px] items-center gap-10 md:gap-10 lg:gap-3 mx-auto mt-[60px] lg:mt-[120px] lg:px-0 px-4 "
+    >
       {/* Left-side Text Navigation */}
       <div className="w-full lg:w-[460px] lg:h-[441px] rounded-[20px] ">
         <h1 className="bold lg:text-[64px] text-[28px] leading-[32px] md:text-[40px] lg:leading-[76.8px]">

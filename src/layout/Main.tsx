@@ -10,13 +10,10 @@ const Main: React.FC = () => {
       <Navbar />
       <Outlet />
       <Footer />
-      <div
-        className="fixed top-1/2 z-30 right-0 transform -translate-y-1/2"
-        data-aos="fade-left"
-      >
+      <div className="fixed top-1/2 z-30 right-0 transform -translate-y-1/2  -rotate-90">
         <div
           className="lg:w-[325px] lg:h-[90px] md:w-[270px] w-[145px] md:h-[75px] h-[45px] 
-                     rounded-[64px] -rotate-90 lg:gap-4 cursor-pointer gap-1 
+                     rounded-[64px]  lg:gap-4 cursor-pointer gap-1 
                      flex flex-row-reverse justify-between items-center 
                      bg-[#F04B23] md:p-2 p-1"
         >
