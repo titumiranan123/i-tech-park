@@ -24,6 +24,7 @@ import video1 from "./../assets/service/video1.png";
 import virtual1 from "./../assets/service/virtual1.png";
 import business1 from "./../assets/service/business.png";
 import Nested from "../page/Nested";
+import cyber from "./../assets/service/cyber.png";
 interface ImageItem {
   image: string; // Adjust this based on the actual image type (e.g., string for URLs or module imports)
 }
@@ -49,6 +50,7 @@ const TextNavigationSlider: React.FC = () => {
       "Social Media Marketing",
       "Business Consultation",
       "Virtual Assistant",
+      "Cyber Security",
     ],
     []
   );
@@ -181,6 +183,13 @@ const TextNavigationSlider: React.FC = () => {
         content:
           "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
         images: [{ image: virtual1 }],
+      },
+      {
+        section: "Cyber Security",
+        title: "Cyber Security",
+        content:
+          "I-Tech Park BD serves as your Digital Marketing Partner in all way possible. From Social Media Marketing to WordPress Customization, and ranking your website in search engines (SEO), we assist you in your digital presence.",
+        images: [{ image: cyber }],
       },
     ],
     []
